@@ -1,0 +1,8 @@
+# Progresso do usuário é local, nunca parte da publicação do site.
+/acompanhamento/
+*.tmp
+node_modules/
+.DS_Store
+/_site/
+/.jekyll-cache/
+/parcerias.html
