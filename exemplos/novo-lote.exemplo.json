@@ -18,12 +18,30 @@
       "mcmv_category": "a_confirmar",
       "mcmv_evidence": "Registre a evidência específica do programa ou a pendência de confirmação.",
       "project_url": "https://example.com/empreendimento-unico",
-      "source_urls": ["https://example.com/empreendimento-unico"],
+      "source_urls": [
+        "https://example.com/empreendimento-unico"
+      ],
       "partner_id": "PARCERIA-DESTE-LOTE",
       "partner_group": "Nome da incorporadora",
       "checked_at": "2026-11-02",
       "outreach_status": "Não contatado",
-      "notes": "Exemplo fictício de estrutura. Não é um empreendimento da pesquisa."
+      "notes": "Exemplo fictício de estrutura. Não é um empreendimento da pesquisa.",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 300000,
+        "max": null,
+        "source_url": "https://example.com/empreendimento-unico/precos",
+        "source_name": "Fonte fictícia — substitua pela fonte verificada",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "EXEMPLO FICTÍCIO: unidade de 35 m²; descreva a planta real do preço",
+        "notes": "Valor fictício apenas para demonstrar o formato. Use null nos valores e status nao_encontrado ou sob_consulta quando não houver preço verificável. Faixa exige kind=faixa e max publicado. Não use entrada, parcela, subsídio ou teto HIS/HMP como preço.",
+        "is_historical": false,
+        "valid_until": null
+      }
     }
   ],
   "partners": [
@@ -42,7 +60,9 @@
       "route_status": "B — condições pendentes",
       "ai_status": "Assistida — confirmar requisitos do canal",
       "steps": "Descreva os passos verificados e as confirmações necessárias.",
-      "source_urls": ["https://example.com/parcerias"],
+      "source_urls": [
+        "https://example.com/parcerias"
+      ],
       "checked_at": "2026-11-02"
     }
   ]
