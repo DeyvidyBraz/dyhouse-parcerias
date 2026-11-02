@@ -10,7 +10,8 @@ function attribute(tag, name) {
 }
 
 function localEntry(value, filename) {
-  return value === filename || value === `./${filename}`;
+  const path = typeof value === 'string' ? value.split(/[?#]/, 1)[0] : value;
+  return path === filename || path === `./${filename}`;
 }
 
 function inlineScript(code) {
@@ -30,7 +31,7 @@ function combineModules(core, app) {
   const imports = [];
   let importedCore = 0;
   const appWithoutCoreImport = app.replace(
-    /\bimport\s*\{([^}]+)\}\s*from\s*(['"])\.\/data-core\.js\2\s*;?/g,
+    /\bimport\s*\{([^}]+)\}\s*from\s*(['"])\.\/data-core\.js(?:\?[^'"\s]+)?\2\s*;?/g,
     (_full, bindings) => {
       importedCore += 1;
       for (const raw of bindings.split(',')) {
