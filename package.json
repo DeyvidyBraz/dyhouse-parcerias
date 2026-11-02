@@ -1,0 +1,13 @@
+{
+  "name": "parcerias-sp-explorer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Consulta local de empreendimentos e caminhos de parceria, com importação JSON por pasta.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs --host 0.0.0.0",
+    "test": "node --test tests/*.test.mjs"
+  }
+}
