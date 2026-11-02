@@ -101,7 +101,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "MA-P01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "unidade_anunciada",
+        "min": 1540132,
+        "max": null,
+        "source_url": "https://www.mpdvendas.com.br/empreendimentos/apartamento/andromeda-by-mpd",
+        "source_name": "MPD Vendas",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Projeto de 90 e 123 m², 2 ou 3 suítes, 2 vagas; planta do valor não identificada",
+        "notes": "Valor da última consulta à página oficial. Foram observados valores diferentes em consultas à mesma página, que não identifica a unidade/planta do preço; confirmar tabela, tipologia e condição. Não criada faixa a partir dessas diferenças.",
+        "source_refs": [
+          "turn411view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "MA-E02",
@@ -159,7 +178,26 @@
       "recency_band": "Complementar — lançamento de 2024",
       "partner_ids": [
         "MA-P01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "unidade_anunciada",
+        "min": 3308000,
+        "max": null,
+        "source_url": "https://mpdvendas.com.br/empreendimentos/apartamento/terrah-alphaville",
+        "source_name": "MPD Vendas",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Projeto de 240 a 330 m², 3 ou 4 suítes, 4 ou 5 vagas; planta do valor não identificada",
+        "notes": "Valor anunciado no portal oficial para o empreendimento na Alameda Walker, 107; unidade e condições não detalhadas na página.",
+        "source_refs": [
+          "turn380view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "MA-E03",
@@ -221,7 +259,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "MA-P02"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://www.mpd.com.br/lp/futuro-lancamento/",
+        "source_name": "MPD / Marques Construtora",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Projeto MPD/Marques ainda sem nome divulgado",
+        "notes": "Pré-cadastro oficial sem preço total publicado. Encontrada referência comercial por m², insuficiente para atribuir preço de unidade; não calculado valor estimado.",
+        "source_refs": [
+          "turn389view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "MA-E04",
@@ -285,7 +342,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "MA-P03"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2313700,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/santana-de-parnaiba/artesano-cantalupe",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-05",
+        "unit_details": "Lote residencial de 455,94 m²",
+        "notes": "Preço de terreno/lote, conforme tabela de tipologias; não inclui construção de casa, apesar da categoria genérica do portal.",
+        "source_refs": [
+          "turn397search5"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM001",
@@ -340,7 +416,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Nova Califórnia Vida e Lazer, em Jardim Califórnia, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 329000,
+        "max": null,
+        "source_url": "https://www.chavesnamao.com.br/imovel/apartamento-a-venda-1-quarto-com-garagem-sp-barueri-jardim-california-RS329000/id-47664080/",
+        "source_name": "Chaves na Mão — Direções Imobiliária",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-11",
+        "unit_details": "46 m², 1 dormitório, terraço e 1 vaga",
+        "notes": "Anúncio explícito de lançamento na Rua Chaves, 658, pela Quattro Company. Planta aprovada de 1 dormitório/escritório deve ser confirmada; outras tipologias têm preços distintos.",
+        "source_refs": [
+          "turn385search0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM002",
@@ -399,7 +494,27 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Mirante Barueri, em Sítio Santa Rita de Cássia / Vila Universal, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE02"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "sob_consulta",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/vila-universal/mirante-barueri",
+        "source_name": "Apto / EPH Incorporadora",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Portal específico informa preço sob consulta, coerente com divulgação preliminar oficial. Oferta de R$ 289 mil encontrada foi descartada porque o texto descreve Griffe Barueri e chama o preço de sugestão.",
+        "source_refs": [
+          "turn395search10",
+          "turn395search8"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM003",
@@ -462,7 +577,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Dom Parque Barueri (Dom Barueri), em Jardim Tupanci, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE03"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 436000,
+        "max": null,
+        "source_url": "https://dombarueri.com/",
+        "source_name": "Dom Barueri — página comercial da Verticall",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Apartamentos; metragem da unidade de entrada a confirmar",
+        "notes": "Preço total inicial de R$ 436 mil; entrada de R$ 10 mil divulgada na mesma página não foi confundida com o valor do imóvel.",
+        "source_refs": [
+          "turn401view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM004",
@@ -520,7 +654,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em NID Alphaville, em Alphaville / Tamboré, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE04"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 814506.17,
+        "max": null,
+        "source_url": "https://www.omelhordasconstrutoras.com.br/imovel/nid-alphaville",
+        "source_name": "O Melhor das Construtoras",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "75 a 153 m²; 2 a 4 dormitórios, no NID da Av. Sylvio Honório Álvares Penteado.",
+        "notes": "Preço inicial anunciado no portal para lançamento/em obras. Data específica da tabela não publicada; confirmar unidade e fluxo.",
+        "source_refs": [
+          "turn352search3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM005",
@@ -577,7 +730,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Terra Alta Barueri, em Jardim Tupanci, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE05"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 475285,
+        "max": null,
+        "source_url": "https://terraalta.meuanuncio.me/",
+        "source_name": "Price BR Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Apartamento de 52,90 m²",
+        "notes": "Preço inicial da campanha comercial para a planta de 52,90 m². Gardens e coberturas são produtos maiores; data da tabela e estoque não informados.",
+        "source_refs": [
+          "turn386view3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM006",
@@ -644,7 +816,27 @@
         "RP02",
         "BE06",
         "RP01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 777814.62,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/aldeia/royal-barueri-ii",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Planta de 79 m² da fase II.",
+        "notes": "Valor inicial no anúncio específico Royal Barueri II. A fase I foi mantida separada; consultar unidade, tabela e vagas.",
+        "source_refs": [
+          "turn392search3",
+          "turn398search15"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM007",
@@ -707,7 +899,26 @@
       "partner_ids": [
         "RP02",
         "BE06"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 665441.94,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/aldeia/royal-barueri",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Planta de 57 m² da fase I.",
+        "notes": "Referência comercial da página Royal Barueri, separada do Royal II. Cards de busca exibem valores diferentes; prevaleceu o valor da ficha individual, sujeito à confirmação.",
+        "source_refs": [
+          "turn398search0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM008",
@@ -775,7 +986,26 @@
         "RP02",
         "BE06",
         "RP01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2105501,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/barueri/kaa-home-boutique",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09-22",
+        "unit_details": "Apartamento de 130,3 m², 3 suítes e 3 vagas.",
+        "notes": "Tabela comercial atribuída a 22/09/2026, Alameda Washington, 670. Anúncios de cessão de contrato com saldo assumido foram descartados.",
+        "source_refs": [
+          "turn399view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM009",
@@ -829,7 +1059,27 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Reserva da Mata Barueri, em Jardim do Líbano, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE07"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://www.reservadamatabarueri.com.br/",
+        "source_name": "Reserva da Mata Barueri — página do empreendimento",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Pesquisa por nome, endereço e preço não encontrou preço total publicamente verificável. Site oficial descreve futuro lançamento na Estrada das Pitas, 995 e condiciona comercialização ao registro da incorporação.",
+        "source_refs": [
+          "turn395search12",
+          "turn395search11"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM010",
@@ -887,7 +1137,26 @@
       "partner_ids": [
         "BE08"
       ],
-      "recency_evidence_year": 2025
+      "recency_evidence_year": 2025,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 359508.07,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/vila-universal/la-vista-condominio-clube",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "48 m²; 2 dormitórios",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn407view4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM011",
@@ -944,7 +1213,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Serenne Barueri, em Aldeia / Vila Nossa Senhora da Escada, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE09"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 460000,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/vila-nossa-senhora-da-escada/serenne",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "2 dormitórios, 49 m²",
+        "notes": "Preço inicial publicado para a planta de 49 m² do Serenne da Zinco. Quantidade de vagas e unidade dependem da tabela; sem data explícita de atualização.",
+        "source_refs": [
+          "turn417view4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM012",
@@ -1002,7 +1290,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Alpha Park View, em Aldeia / Nova Aldeinha, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE10"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 592000,
+        "max": null,
+        "source_url": "https://www.chavesnamao.com.br/imovel/apartamento-a-venda-2-quartos-com-garagem-sp-barueri-aldeia-RS592000/id-22241597/",
+        "source_name": "Chaves na Mão — anúncio de lançamento",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-10",
+        "unit_details": "Plantas de 67 a 73 m², 2 suítes e varanda; confirmar vaga da unidade de entrada.",
+        "notes": "Anúncio descreve construção Danpris e tabela de plantas, atualizado em 10/10/2026, no nº 668 da Rua General de Divisão Pedro Rodrigues da Silva. Preços de revenda e descrição com valor de R$ 67 mil inconsistente foram descartados.",
+        "source_refs": [
+          "turn396search2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "BM013",
@@ -1060,7 +1367,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vitta Barueri, em Bairro Altos, Barueri. Gostaria de solicitar credenciamento para levar nossos clientes próprios. Podem confirmar aceitação PF/PJ, responsável comercial, documentos, liberação desse produto, tabela e estoque, comissão efetiva e base de cálculo, eventual rateio, prazo/gatilho de pagamento e registro/proteção do cliente? Peço também o estágio atual de vendas e o enquadramento MCMV, quando aplicável. [NOME / EMPRESA / TELEFONE]",
       "partner_ids": [
         "BE11"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "unidade_anunciada",
+        "min": 226800,
+        "max": null,
+        "source_url": "https://www.atitudeimoveis.com.br/imovel/novo-loteamento-vitta-barueri/9598",
+        "source_name": "Atitude Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Lote de 126 m²",
+        "notes": "Valor total anunciado para lote no Vitta Barueri; não inclui construção. Preço e disponibilidade precisam ser confirmados.",
+        "source_refs": [
+          "turn401view2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Authoria por Dubai",
@@ -1117,7 +1443,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "PI01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 3524938,
+        "max": null,
+        "source_url": "https://edilsonalves.com.br/imovel/authoria-by-dubai-273-m2/",
+        "source_name": "Eddy Broker — Edilson Alves",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09",
+        "unit_details": "Apartamento tipo de 273 m²; 4 suítes; 4 vagas",
+        "notes": "Preço inicial específico da tipologia de 273 m² na tabela comercial de setembro/2026; a cobertura tem referência distinta, não usada como máximo do estoque.",
+        "source_refs": [
+          "turn379view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Open View 47",
@@ -1174,7 +1519,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "PI01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1644294,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/barueri/open-view-47",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-08",
+        "unit_details": "120,67 m²; 2 vagas",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn383view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Acervo Apartments",
@@ -1233,7 +1597,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "PI01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 700000,
+        "max": null,
+        "source_url": "https://srfalphaimoveis.com.br/empreendimento/acervo-apartments-em-green-valley-alphaville-baruerisp/100011",
+        "source_name": "SRF Alpha Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Empreendimento de 40 a 99 m²; tipologia do preço inicial a confirmar",
+        "notes": "Preço inicial publicado pela imobiliária para o Acervo Apartments, Avenida Andrômeda, 946. Não é preço do Acervo Residences; confirmar metragem da unidade de entrada.",
+        "source_refs": [
+          "turn390view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Acervo Residences",
@@ -1292,7 +1675,26 @@
       "recency_band": "Complementar — lançamento de 2024",
       "partner_ids": [
         "PI01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2689829,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/barueri/acervo-residences",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-06",
+        "unit_details": "188,17 m²; 3 suítes; 3 vagas",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn390view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Joy Barueri",
@@ -1349,7 +1751,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "PI01"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 644460.65,
+        "max": null,
+        "source_url": "https://www.omelhordasconstrutoras.com.br/imovel/joy-barueri",
+        "source_name": "O Melhor das Construtoras",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Apartamentos de 65 a 167 m²; tipologia da unidade de entrada a confirmar",
+        "notes": "Referência de preço publicada pelo portal. Ofertas promocionais de outras páginas divergem; confirmar unidade e condição comercial vigente.",
+        "source_refs": [
+          "turn409view2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Amáz Alphaville",
@@ -1407,7 +1828,26 @@
       "recency_band": "Complementar — lançamento de 2024",
       "partner_ids": [
         "PI02"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1208589,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/barueri/amaz-alphaville",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09-17",
+        "unit_details": "89,16 m², 3 dormitórios, 1 suíte e 2 vagas.",
+        "notes": "Preço inicial da tabela comercial atribuída a 17/09/2026; Alameda Amazonas, 447. Coberturas têm valores próprios.",
+        "source_refs": [
+          "turn388view2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Aura Tamboré",
@@ -1467,7 +1907,27 @@
       "recency_band": "Data de lançamento a confirmar — divergência 2024/2025",
       "partner_ids": [
         "PI02"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1661354.99,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/santana-de-parnaiba/tambore/aura-tambore",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Planta de 125 m² no Aura Tamboré.",
+        "notes": "Valor inicial publicado no portal; a página oficial mantém valores sob consulta. Confirmar fase e unidade antes de apresentar proposta.",
+        "source_refs": [
+          "turn384search16",
+          "turn384search0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Alameda (DTQ. Alameda)",
@@ -1523,7 +1983,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "PI03"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://www.pmiimobi.com.br/imovel/apartamentos-113m-e-165m-dtq-alameda-arqos-townhouses-em-alphaville-pmi-1058",
+        "source_name": "Fonte comercial consultada",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Localizada referência de R$ 13.500 por m², sem preço total verificável de unidade. Não foi multiplicado pela metragem nem tratado como preço de venda total.",
+        "source_refs": [
+          "turn397search0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "BLVD. Alti",
@@ -1581,7 +2060,26 @@
       "recency_band": "Complementar — lançamento de 2024",
       "partner_ids": [
         "PI03"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1300000,
+        "max": null,
+        "source_url": "https://alphavilleon.com.br/imoveis/blvd-alti/",
+        "source_name": "Alphaville On",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "106 a 136 m²; 2 ou mais suítes",
+        "notes": "Preço inicial publicado; portal não informa valor máximo. Confirmar unidade, fase de vendas e tabela com a Arqos.",
+        "source_refs": [
+          "turn400view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "RYO Copacabana",
@@ -1637,7 +2135,26 @@
       "recency_band": "Recente / pré-lançamento",
       "partner_ids": [
         "PI04"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 661541.76,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/empresarial-18-do-forte/ryo-copacabana",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-23",
+        "unit_details": "2 dormitórios, 43 m², 1 vaga",
+        "notes": "Preço inicial publicado para planta de 43 m². A de 77 m² com 2 suítes e 2 vagas tem preço superior; confirmar tabela e liberação comercial do pré-lançamento.",
+        "source_refs": [
+          "turn417view5"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Dellagio Alphaville",
@@ -1693,7 +2210,26 @@
       "recency_band": "Complementar — lançamento de 2024",
       "partner_ids": [
         "PI05"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1185156,
+        "max": null,
+        "source_url": "https://dellagioresidencial.com.br/",
+        "source_name": "Dellagio Residencial — parceira comercial da Atria",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-05",
+        "unit_details": "95 m², 2 suítes, 2 vagas e depósito.",
+        "notes": "Referência da tabela de maio/2026 expressamente indicada no anúncio comercial. Mantida como histórica para dar ordem de grandeza, sujeita a atualização por INCC e à confirmação; Av. Ômega, 238.",
+        "source_refs": [
+          "turn396search3"
+        ],
+        "is_historical": true,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ001",
@@ -1749,7 +2285,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Duo Stay Residence, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Duo Stay Residence — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Duo Stay Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Duo Stay Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 399000,
+        "max": null,
+        "source_url": "https://duostayresidencealphaville.com.br/",
+        "source_name": "Duo Stay Residence — página comercial",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Studio a partir de 32 m²; 1 vaga",
+        "notes": "Oferta inicial divulgada para pagamento à vista. Não representa condição financiada; confirmar unidade, registro e tabela vigente.",
+        "source_refs": [
+          "turn383view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ002",
@@ -1811,7 +2366,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Art Design Residence, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Art Design Residence — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Art Design Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Art Design Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 751700,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/alphaville/art-design-residence",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-20",
+        "unit_details": "58 m²; 2 dormitórios; 1 suíte; 1 vaga",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn371search3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ003",
@@ -1867,7 +2441,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Liv Stay Residence, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Liv Stay Residence — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Liv Stay Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Liv Stay Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 399000,
+        "max": null,
+        "source_url": "https://srfalphaimoveis.com.br/empreendimento/liv-stay-residence-apartamentos-de-32m-a-112m-em-alphaville-em-centro-comercial-jubran-baruerisp/100009",
+        "source_name": "SRF Alpha Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Studios compactos de 32 e 35 m²; empreendimento também possui apartamentos maiores",
+        "notes": "Preço inicial anunciado do Liv Stay. A página tem divergência no logradouro, mas o texto identifica Avenida Mackenzie, 730, coincidente com a RSF; confirmar tipologia, condição de pagamento e unidade de entrada.",
+        "source_refs": [
+          "turn374view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ004",
@@ -1923,7 +2516,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Beyond Residence, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Beyond Residence — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Beyond Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Beyond Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "faixa",
+        "min": 657826,
+        "max": 1103211,
+        "source_url": "https://corretoryuri.com.br/empreendimentos/beyond-residence-alphaville",
+        "source_name": "Corretor Yuri Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "43 a 79 m²; plantas anunciadas",
+        "notes": "Faixa expressamente publicada para quatro plantas anunciadas; não corresponde ao teto de preço de todo o empreendimento.",
+        "source_refs": [
+          "turn371search9"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ005",
@@ -1984,7 +2596,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Square Design Residence, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Square Design Residence — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Square Design Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Square Design Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1282378,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/barueri/square-design-residence",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-06",
+        "unit_details": "94,58 m²; 3 suítes; 2 vagas",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn409view4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ006",
@@ -2041,7 +2672,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Symmetry Residence, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Symmetry Residence — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Symmetry Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Symmetry Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "faixa",
+        "min": 956295,
+        "max": 1235278,
+        "source_url": "https://corretoryuri.com.br/empreendimentos/symmetry-residence",
+        "source_name": "Corretor Yuri Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "64,96 a 87,71 m²; três plantas anunciadas",
+        "notes": "Faixa expressamente publicada para três plantas anunciadas; outras tipologias e estoque não estão abrangidos.",
+        "source_refs": [
+          "turn374search6"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ007",
@@ -2098,7 +2748,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Eternity Residence, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Eternity Residence — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Eternity Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Eternity Residence, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1209215,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/barueri/eternity-residence",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-14",
+        "unit_details": "88,05 m²; 3 suítes; 2 vagas",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn409view5"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ008",
@@ -2158,7 +2827,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir HUB RSF e seguir Quero ser parceiro. 2. Para PF, preencher o credenciamento com dados profissionais e CRECI; o titular revisa documentos e termos. 3. Para PJ, usar Quero ser parceiro e solicitar admissão de imobiliária externa. 4. Após análise, confirmar produtos disponíveis, tabela, comissão líquida do parceiro, base/rateio, pagamento e registro do cliente. O HUB anuncia acesso ao portfólio atual e futuro, mas disponibilidade e condições comerciais devem ser confirmadas. Indicar nominalmente Breeze Home Clube Barueri, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Breeze Home Clube Barueri — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Breeze Home Clube Barueri, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Breeze Home Clube Barueri, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "faixa",
+        "min": 351045,
+        "max": 553467,
+        "source_url": "https://corretoryuri.com.br/empreendimentos/breeze-home-clube",
+        "source_name": "Corretor Yuri Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "48,05 a 72 m²; seis plantas anunciadas",
+        "notes": "Faixa de seis plantas publicada para o lançamento em Jardim Julio, Barueri; disponibilidade e tabela a confirmar.",
+        "source_refs": [
+          "turn374search7"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ009",
@@ -2219,7 +2907,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir UP Parceiros e cadastrar o corretor responsável com CPF/CRECI; o titular define senha e revisa termos. 2. Informar o empreendimento e solicitar o gestor de parceria. 3. Para imobiliária, enviar solicitação nominal ao contato institucional e pedir procedimento CNPJ/CRECI PJ. 4. Obter aceite, tabela atual, comissão efetiva/base/rateio, pagamento e regras de acompanhamento e proteção do cliente. Cadastro não implica liberação automática do produto. Indicar nominalmente Vista Alphagran, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Vista Alphagran — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Vista Alphagran, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Vista Alphagran, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2536800,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/barueri/vista-alphagran",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09-23",
+        "unit_details": "160,05 m²; 3 suítes; 3 vagas",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn400view3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ010",
@@ -2279,7 +2986,26 @@
       "partnership_approved": false,
       "next_action": "1. Abrir UP Parceiros e cadastrar o corretor responsável com CPF/CRECI; o titular define senha e revisa termos. 2. Informar o empreendimento e solicitar o gestor de parceria. 3. Para imobiliária, enviar solicitação nominal ao contato institucional e pedir procedimento CNPJ/CRECI PJ. 4. Obter aceite, tabela atual, comissão efetiva/base/rateio, pagamento e regras de acompanhamento e proteção do cliente. Cadastro não implica liberação automática do produto. Indicar nominalmente Bosque Alphagran, em Barueri, e solicitar confirmação de disponibilidade para atendimento de clientes próprios.",
       "request_subject": "Parceria externa PF/PJ — Bosque Alphagran — Barueri",
-      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Bosque Alphagran, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]"
+      "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero solicitar credenciamento para levar clientes próprios ao empreendimento Bosque Alphagran, em Barueri. Poderiam informar o gestor responsável, aceitação PF/PJ, documentos, habilitação do produto, tabela e estoque, comissão efetiva do parceiro e base de cálculo, eventual rateio, vigência, gatilho/prazo de pagamento e registro/proteção do cliente? Peço confirmar estágio comercial e eventual enquadramento MCMV por unidade. [NOME / EMPRESA / TELEFONE]",
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 800500,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/barueri/alphagran/bosque-alphagran",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "52 m²; tipologia de entrada",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn394search19"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "RJ011",
@@ -2342,7 +3068,28 @@
       "aliases": [
         "Arbórea Alphagran",
         "Arborea Alphagran"
-      ]
+      ],
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://arboriumalphagran.com.br/",
+        "source_name": "JMF",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Pré-lançamento sem preço verificável localizado. Anúncio de R$ 2.994.600 declara expressamente que é expectativa e não valor real; outro anúncio mistura Arborium e Arbórea e foi descartado.",
+        "source_refs": [
+          "turn394search18",
+          "turn397view2",
+          "turn401search16"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     }
   ],
   "partners": [
@@ -3998,5 +4745,33 @@
     "Pesquisa complementar das incorporadoras econômicas e locais em Barueri. Não foram acrescentados produtos sem localização, recência e canal minimamente verificáveis. Treze empreendimentos únicos, incluindo três de 2024 ainda em obras e um loteamento. Coincorporações e fases são identificadas nas notas.",
     "11 produtos ativos com fonte nominal e rota de solicitação; 21 exclusões/monitoramentos. Recorte inclui obras de 2024 com ano original explícito. Fontes comerciais complementam datas e taxas, sem substituir confirmação escrita. Alphaville é região; cidades registradas separadamente. Pesquisa não enviou mensagens nem submeteu cadastro.",
     ""
-  ]
+  ],
+  "pricing_research": {
+    "checked_at": "2026-11-02",
+    "projects_reviewed": 39,
+    "with_public_price": 34,
+    "by_status": {
+      "publicado": 34,
+      "nao_encontrado": 4,
+      "sob_consulta": 1
+    },
+    "by_source_type_with_price": {
+      "oficial": 2,
+      "comercial": 32
+    },
+    "by_price_kind": {
+      "unidade_anunciada": 3,
+      "a_partir_de": 28,
+      "faixa": 3
+    },
+    "historical_references": 1,
+    "methodology": [
+      "Consulta de preços realizada em 02/11/2026 para os 198 empreendimentos dos três arquivos. Cada referência mantém fonte, data e tipologia quando identificada.",
+      "Prioridade para fonte oficial; fonte comercial identificada quando não foi encontrada uma referência oficial suficiente. Preço total em BRL, sem inferir preço a partir de metragem.",
+      "A partir de é referência inicial anunciada, com máximo desconhecido. Faixa cobre somente as plantas ou unidades explicitamente publicadas na fonte, não todo o estoque. Unidade anunciada é um valor específico sem faixa confirmada.",
+      "Entrada, parcelas, subsídio, renda, avaliação, teto regulatório HIS/HMP, estimativas por IA, valores por m² sem total e anúncios de identidade não confirmada foram excluídos dos campos numéricos.",
+      "Data da consulta não equivale à data da tabela. Referências explicitamente antigas ou com validade vencida são marcadas como históricas; toda referência exige confirmação da tabela e da disponibilidade.",
+      "A busca de preços não altera o enquadramento MCMV, estágio, endereço, identidade ou aprovação de parceria. Não houve contato nem solicitação às empresas."
+    ]
+  }
 }
