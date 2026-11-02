@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "consultation_date": "2026-11-02",
+  "title": "MODELO: substitua pelos dados da próxima pesquisa",
+  "projects": [
+    {
+      "id": "LOTE-NOVO-001",
+      "name": "Nome exato do empreendimento — fase ou condomínio, se houver",
+      "developer": "Nome da incorporadora",
+      "neighborhood": "Bairro",
+      "zone": "Sul",
+      "city": "São Paulo",
+      "address": "Rua e número do empreendimento",
+      "stage": "Pré-lançamento",
+      "launch_date": "Não publicada",
+      "recency_evidence": "Descreva a fonte do estágio e da data, sem transformar RI em lançamento.",
+      "mcmv": "A confirmar",
+      "mcmv_category": "a_confirmar",
+      "mcmv_evidence": "Registre a evidência específica do programa ou a pendência de confirmação.",
+      "project_url": "https://example.com/empreendimento-unico",
+      "source_urls": ["https://example.com/empreendimento-unico"],
+      "partner_id": "PARCERIA-DESTE-LOTE",
+      "partner_group": "Nome da incorporadora",
+      "checked_at": "2026-11-02",
+      "outreach_status": "Não contatado",
+      "notes": "Exemplo fictício de estrutura. Não é um empreendimento da pesquisa."
+    }
+  ],
+  "partners": [
+    {
+      "id": "PARCERIA-DESTE-LOTE",
+      "developer": "Nome da incorporadora",
+      "partner_group": "Nome da incorporadora",
+      "partner_url": "https://example.com/parcerias",
+      "pf_url": "https://example.com/parcerias/corretores",
+      "pj_url": "https://example.com/parcerias/imobiliarias",
+      "contact": "Contato profissional público da parceria",
+      "pf": "A confirmar",
+      "pj": "A confirmar",
+      "commission_pf": "Não publicada",
+      "commission_pj": "Não publicada",
+      "route_status": "B — condições pendentes",
+      "ai_status": "Assistida — confirmar requisitos do canal",
+      "steps": "Descreva os passos verificados e as confirmações necessárias.",
+      "source_urls": ["https://example.com/parcerias"],
+      "checked_at": "2026-11-02"
+    }
+  ]
+}
