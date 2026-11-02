@@ -28,6 +28,72 @@ export const PARTNERSHIP_STATUS_LABELS = Object.freeze({
   nao_solicitada: 'Não solicitada', solicitada: 'Parceria solicitada', feita: 'Parceria feita',
 });
 export const TRACKING_SCHEMA = 'dyhouse-partnership-tracking/v1';
+export const PRICE_KIND_LABELS = Object.freeze({
+  a_partir_de: 'A partir de', faixa: 'Faixa anunciada', unidade_anunciada: 'Unidade anunciada',
+});
+
+const brlFormatter = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+export function formatBRL(value) {
+  return typeof value === 'number' && Number.isFinite(value) ? brlFormatter.format(value) : '';
+}
+
+/** Entrada brasileira: 500000 e R$ 500.000,00 significam quinhentos mil reais. */
+export function parseBRLInput(value) {
+  if (typeof value === 'number') return Number.isFinite(value) && value >= 0 && value <= Number.MAX_SAFE_INTEGER / 100 ? value : null;
+  const raw = String(value ?? '').replace(/R\$/gi, '').replace(/\s/g, '').trim();
+  if (!raw || !/^(?:\d+|\d{1,3}(?:\.\d{3})+)(?:,\d{0,2})?$/.test(raw)) return null;
+  const amount = Number(raw.replace(/\./g, '').replace(',', '.'));
+  return Number.isFinite(amount) && amount >= 0 && amount <= Number.MAX_SAFE_INTEGER / 100 ? amount : null;
+}
+
+/** Mascara durante a digitação sem deslocar o valor para centavos. */
+export function maskBRLInput(value, finalize = false) {
+  if (parseBRLInput(value) === null) return '';
+  if (typeof value === 'number') return formatBRL(value);
+  const raw = String(value ?? '').replace(/R\$/gi, '').replace(/[^\d,]/g, '');
+  if (!raw || !/\d/.test(raw)) return '';
+  const [integer, ...decimals] = raw.split(',');
+  const whole = (integer || '0').replace(/^0+(?=\d)/, '');
+  const fraction = decimals.join('').slice(0, 2);
+  const formatted = 'R$ ' + whole.replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (decimals.length ? ',' + fraction : '');
+  return finalize ? formatBRL(parseBRLInput(formatted)) : formatted;
+}
+
+/** Preço é uma observação indivisível: valor, tipologia, data e fonte viajam juntos. */
+export function normalizePricing(raw) {
+  if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+  const price = safeCopy(raw);
+  const amount = value => typeof value === 'number' && Number.isFinite(value) && value > 0 && value <= 1e11 ? value : null;
+  const currency = raw.currency || 'BRL';
+  price.currency = 'BRL';
+  price.status = ['publicado', 'sob_consulta', 'nao_encontrado'].includes(raw.status) ? raw.status : 'nao_encontrado';
+  price.kind = Object.hasOwn(PRICE_KIND_LABELS, raw.kind) ? raw.kind : null;
+  price.min = amount(raw.min); price.max = amount(raw.max);
+  price.source_url = safeUrl(raw.source_url) || null;
+  price.source_name = text(raw.source_name) || null;
+  price.source_type = ['oficial', 'comercial'].includes(raw.source_type) ? raw.source_type : null;
+  price.checked_at = dateInfo(raw.checked_at).explicit ? text(raw.checked_at) : null;
+  price.price_date = text(raw.price_date) || null;
+  price.valid_until = /^\d{4}-\d{2}-\d{2}$/.test(raw.valid_until) ? raw.valid_until : null;
+  price.is_historical = raw.is_historical === true || Boolean(price.valid_until && price.checked_at && price.valid_until < price.checked_at.slice(0,10));
+  price.unit_details = text(raw.unit_details) || null;
+  price.notes = text(raw.notes);
+  price.source_refs = array(raw.source_refs).filter(value => typeof value === 'string');
+  if (price.status === 'publicado' && (currency !== 'BRL' || !price.kind || !price.min || !price.source_url || (price.kind === 'faixa' && (price.max === null || price.max < price.min)))) {
+    price.status = 'nao_encontrado';
+    price.notes = [price.notes, 'Referência de preço incompleta ou inválida; confirmar valor e fonte.'].filter(Boolean).join(' ');
+  }
+  if (price.status !== 'publicado') { price.min = null; price.max = null; price.kind = null; }
+  else if (price.kind !== 'faixa') price.max = null;
+  return price;
+}
+
+export function priceLabel(raw) {
+  const price = normalizePricing(raw);
+  if (!price || price.status !== 'publicado') return price?.status === 'sob_consulta' ? 'Preço sob consulta' : 'Preço não localizado';
+  if (price.kind === 'faixa') return `${formatBRL(price.min)} a ${formatBRL(price.max)}`;
+  return `${price.kind === 'a_partir_de' ? 'A partir de ' : ''}${formatBRL(price.min)}`;
+}
 
 const BLOCKED_KEYS = new Set(['__proto__', 'prototype', 'constructor']);
 const EMPTY_TEXT = new Set(['', '-', '—', 'n/a', 'null', 'undefined']);
@@ -296,6 +362,7 @@ function normalizeRecord(raw, context, rowIndex) {
   p.source_urls = urlList(p.source_urls || p.fontes);
   p.partnership_source_urls = urlList(p.partnership_source_urls);
   p.checked_at = p.checked_at || context.date;
+  if (Object.hasOwn(p, 'pricing')) p.pricing = normalizePricing(p.pricing);
 
   const restoredRoutes = context.restoredRoutes ? context.restoredRoutes.map(route => normalizeRoute(route, context.fileName, '')) : null;
   let candidates = restoredRoutes || context.partnersById.get(text(p.partner_id)) || [];
@@ -365,12 +432,13 @@ function normalizedFields(project) {
     contactStatus: text(project.outreach_status) || 'Não informado', partnershipStatus: 'nao_solicitada',
   };
 }
-const CONFLICT_FIELDS = ['developer', 'neighborhood', 'zone', 'city', 'address', 'stage', 'launch_date', 'mcmv_category', 'commission_pf', 'commission_pj', 'pf_url', 'pj_url', 'partner_contact', 'route_status'];
+const CONFLICT_FIELDS = ['developer', 'neighborhood', 'zone', 'city', 'address', 'stage', 'launch_date', 'mcmv_category', 'commission_pf', 'commission_pj', 'pf_url', 'pj_url', 'partner_contact', 'route_status', 'pricing'];
 function conflictValue(record, field) {
   if (field === 'mcmv_category') return nonEmpty(record.mcmv) || nonEmpty(record.mcmv_category) ? normalizeMcmv(record.mcmv, record.mcmv_category) : '';
   return record[field];
 }
 function conflictKey(field, value) {
+  if (field === 'pricing') return stableStringify([value.status, value.kind, value.min, value.max, value.currency]);
   if (['pf_url', 'pj_url'].includes(field)) return canonicalizeUrl(value) || safeUrl(value,{allowContact:true});
   if (field === 'stage') return normalizeStage(value);
   if (field === 'address') return normalizedAddress(value);
@@ -387,6 +455,9 @@ function mergeGroup(records, reasons) {
   // Explicit null is an intentional absence of a confirmed launch year, not a gap to backfill.
   const datedYearRecord = records.find(record => Object.hasOwn(record,'launch_year'));
   if (datedYearRecord) merged.launch_year = datedYearRecord.launch_year;
+  const priceRecords = records.filter(record => record.pricing).sort((a, b) =>
+    (Date.parse(b.pricing.checked_at) || b._date.timestamp) - (Date.parse(a.pricing.checked_at) || a._date.timestamp));
+  if (priceRecords.length) merged.pricing = safeCopy(priceRecords[0].pricing);
   merged.routes = mergeRoutes(records.flatMap(record => record.routes));
   merged.aliases = unique(records.flatMap(record => [record.name, ...array(record.aliases)]), normalizeText);
   merged.originalIds = unique(records.map(record => record.id));
@@ -398,7 +469,7 @@ function mergeGroup(records, reasons) {
   merged.source_urls = urlList(records.flatMap(record => record.source_urls));
   merged.partnership_source_urls = urlList([...records.flatMap(record => record.partnership_source_urls), ...merged.routes.flatMap(route => route.source_urls)]);
   merged.project_urls = urlList(records.map(record => record.project_url));
-  merged.sources = urlList([...merged.project_urls, ...merged.source_urls, ...merged.partnership_source_urls]);
+  merged.sources = urlList([...merged.project_urls, ...merged.source_urls, ...merged.partnership_source_urls, ...records.map(record => record.pricing?.source_url)]);
   merged.occurrences = records.length;
   merged.mergeReasons = unique(reasons);
   merged.conflicts = [];
@@ -592,6 +663,9 @@ const FILTER_FIELDS = {
 
 export function filterProjects(projects = [], filters = {}) {
   const words = normalizeText(filters.query).split(' ').filter(Boolean);
+  const priceMin = parseBRLInput(filters.priceMin), priceMax = parseBRLInput(filters.priceMax);
+  const byPrice = priceMin !== null || priceMax !== null;
+  if (priceMin !== null && priceMax !== null && priceMin > priceMax) return [];
   const selections = Object.fromEntries(Object.keys(FILTER_FIELDS).map(key => [key, new Set(array(filters[key]).filter(nonEmpty).map(String))]));
   return projects.filter(project => {
     if (words.length && !words.every(word => project.searchText.includes(word))) return false;
@@ -599,6 +673,14 @@ export function filterProjects(projects = [], filters = {}) {
     if (filters.onlyConflicts && !project.conflicts.length) return false;
     if (filters.onlyDuplicates && project.occurrences < 2) return false;
     if (filters.onlyPossibleDuplicates && !project.possibleDuplicateIds.length) return false;
+    if (byPrice) {
+      const price = normalizePricing(project.pricing);
+      if (price?.status !== 'publicado') return false;
+      // Faixas se sobrepõem; uma referência "a partir de" é comparada como ponto,
+      // sem pressupor estoque ou inventar um limite superior para o empreendimento.
+      if (priceMin !== null && (price.max ?? price.min) < priceMin) return false;
+      if (priceMax !== null && price.min > priceMax) return false;
+    }
     return true;
   });
 }
