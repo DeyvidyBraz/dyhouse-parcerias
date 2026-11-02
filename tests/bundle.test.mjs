@@ -53,6 +53,19 @@ test('referências obrigatórias ausentes falham explicitamente', async t => {
   await assert.rejects(() => buildStandalone({ projectDir }), /styles\.css/);
 });
 
+test('URLs versionadas do site continuam produzindo HTML autônomo sem rede', async t => {
+  const projectDir = await fixture(t, {
+    'index.html': '<html><head><link href="./styles.css?v=precos" rel="stylesheet"></head><body><script type="module" src="./app.js?v=precos"></script></body></html>',
+    'app.js': 'import { ingestDatasets } from "./data-core.js?v=precos";\nwindow.__ready = ingestDatasets();',
+  });
+  const result = await buildStandalone({ projectDir });
+  const html = await readFile(result.outputPath, 'utf8');
+  assert.ok(!html.includes('?v=precos'));
+  assert.ok(!/^\s*import\s/m.test(html));
+  assert.ok(html.includes('body { color: #123; }'));
+  assert.equal(result.projectCount, 1);
+});
+
 test('HTML autônomo preserva arquivos e namespaces separados ao embutir novos lotes e subpastas', async t => {
   const projectDir = await fixture(t);
   await mkdir(join(projectDir, 'dist', 'dados', 'novos'));
