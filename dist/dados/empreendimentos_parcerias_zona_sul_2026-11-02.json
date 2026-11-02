@@ -207,7 +207,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vibra Sabará, em Campo Grande / Vila Isa, São Paulo, no endereço Rua Quararibéia, 223. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 276900,
+        "max": null,
+        "source_url": "https://www.vibraresidencial.com.br/",
+        "source_name": "Vibra",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "2 dormitórios; planta e unidade do preço não identificadas na vitrine oficial",
+        "notes": "Valor de entrada divulgado na vitrine oficial consultada; sujeito à unidade disponível.",
+        "source_refs": [
+          "turn337view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA002",
@@ -265,7 +284,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vibra Rio Bonito, em Socorro / Rio Bonito, São Paulo, no endereço Rua Olívia Guedes Penteado, 1184. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 282000,
+        "max": null,
+        "source_url": "https://www.vibraresidencial.com.br/produtos/vibra-rio-bonito/",
+        "source_name": "Vibra",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "2 dormitórios",
+        "notes": "Página oficial anuncia preço do produto a partir de R$ 282 mil, em valor arredondado; confirmar unidade e tabela vigente.",
+        "source_refs": [
+          "turn339view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA003",
@@ -322,7 +360,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vibra Estação Campo Limpo, em Campo Limpo / Vila Prel, São Paulo, no endereço Estrada de Itapecerica, 2367. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 281900,
+        "max": null,
+        "source_url": "https://www.vibraresidencial.com.br/",
+        "source_name": "Vibra",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "1 e 2 dormitórios; planta e unidade do preço não identificadas na vitrine oficial",
+        "notes": "Valor de entrada divulgado na vitrine oficial consultada; sujeito à unidade disponível.",
+        "source_refs": [
+          "turn337view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA004",
@@ -378,7 +435,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vibra Estação Giovanni, em Vila Nova das Belezas / Campo Limpo, São Paulo, no endereço Rua Manuel de Oliveira Falcão, 44. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 229900,
+        "max": null,
+        "source_url": "https://www.vibraresidencial.com.br/",
+        "source_name": "Vibra",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "1 e 2 dormitórios; planta e unidade do preço não identificadas na vitrine oficial",
+        "notes": "Valor de entrada divulgado na vitrine oficial consultada; sujeito à unidade disponível.",
+        "source_refs": [
+          "turn337view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA005",
@@ -434,7 +510,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vibra Nações Unidas, em Jardim Promissão / Santo Amaro, São Paulo, no endereço Avenida das Nações Unidas, 19847. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 309900,
+        "max": null,
+        "source_url": "https://www.vibraresidencial.com.br/",
+        "source_name": "Vibra",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "1 e 2 dormitórios; planta e unidade do preço não identificadas na vitrine oficial",
+        "notes": "Valor de entrada divulgado na vitrine oficial consultada; sujeito à unidade disponível.",
+        "source_refs": [
+          "turn337view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA006",
@@ -490,7 +585,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vibra João Dias, em Vila das Belezas / Campo Limpo, São Paulo, no endereço Rua Luciano Silva, 51. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 289900,
+        "max": null,
+        "source_url": "https://www.vibraresidencial.com.br/produtos/vibra-joao-dias/",
+        "source_name": "Vibra",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Unidades HIS2",
+        "notes": "Referência do texto legal oficial para HIS2. Vitrine contém valor aparentemente inconsistente de R$ 33.990, que foi descartado. Confirmar preço e estoque; teto regulatório HIS não usado como máximo comercial.",
+        "source_refs": [
+          "turn346view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA007",
@@ -547,7 +661,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Vibra Veleiros, em Socorro / Veleiros, São Paulo, no endereço Rua Olívia Guedes Penteado, 948. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 294900,
+        "max": null,
+        "source_url": "https://www.vibraresidencial.com.br/",
+        "source_name": "Vibra",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "2 dormitórios; planta e unidade do preço não identificadas na vitrine oficial",
+        "notes": "Valor de entrada divulgado na vitrine oficial consultada; sujeito à unidade disponível.",
+        "source_refs": [
+          "turn337view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA008",
@@ -605,7 +738,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Metrocasa Bosque Giovanni Gronchi, em Vila das Belezas / Campo Limpo, São Paulo, no endereço Rua Aristódemo Gazzotti, 91. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 165600,
+        "max": null,
+        "source_url": "https://real21.com.br/metrocasa-bosque-giovanni-gronchi/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-14",
+        "unit_details": "24,03 m²; 1 dormitório; sem vaga",
+        "notes": "Anúncio comercial indicava uma unidade na tipologia de entrada; confirmar disponibilidade e tabela vigente.",
+        "source_refs": [
+          "turn360view3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA009",
@@ -663,7 +815,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Metrocasa Prime Alto do Ipiranga, em Alto do Ipiranga, São Paulo, no endereço Rua Capichanã, 154. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "unidade_anunciada",
+        "min": 208000,
+        "max": null,
+        "source_url": "https://stayou.com.br/propriedades/metrocasa-prime-alto-do-ipiranga-metrocasa",
+        "source_name": "Stayou",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-08-06",
+        "unit_details": "1 dormitório; aproximadamente 24,6 m²",
+        "notes": "Valor anunciado e datado pelo portal em agosto/2026; outras páginas divergem entre R$ 208 mil e R$ 216 mil. Confirmar tabela vigente.",
+        "source_refs": [
+          "turn363search1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA010",
@@ -721,7 +892,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Metrocasa Viva Campo Limpo, em Campo Limpo / Parque Rebouças, São Paulo, no endereço Rua Gil Simões da Costa, 170. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 158400,
+        "max": null,
+        "source_url": "https://real21.com.br/metrocasa-viva-campo-limpo/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-21",
+        "unit_details": "24,8 m²; 1 dormitório; sem vaga",
+        "notes": "Anúncio comercial indicava uma unidade na tipologia de entrada; confirmar disponibilidade e tabela vigente.",
+        "source_refs": [
+          "turn363search2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA011",
@@ -779,7 +969,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Metrocasa Alto da Boa Vista, em Alto da Boa Vista / Santo Amaro, São Paulo, no endereço Rua Nove de Julho, 220. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "unidade_anunciada",
+        "min": 264800,
+        "max": null,
+        "source_url": "https://real21.com.br/metrocasa-alto-da-boa-vista/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09-10",
+        "unit_details": "24,3 m²; 1 dormitório; sem vaga",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn363search4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA012",
@@ -837,7 +1046,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Metrocasa Prime Saúde, em Saúde / Parque Imperial, São Paulo, no endereço Rua Degroux, 49. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 251200,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/sao-paulo/saude/metrocasa-prime-saude",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-08-25",
+        "unit_details": "27 m²; 1 dormitório; sem vaga",
+        "notes": "Preço inicial da tipologia de 27 m²; a fonte indica studios menores como vendidos, portanto seus preços não foram usados.",
+        "source_refs": [
+          "turn363search3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA013",
@@ -897,7 +1125,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Plano&Raízes das Mercês, em Vila das Mercês / Sacomã, São Paulo, no endereço Rua Romão Puiggari, 1025. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 232000,
+        "max": null,
+        "source_url": "https://www.planoeplano.com.br/raizes-das-merces",
+        "source_name": "Plano&Plano",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Apartamentos de 1 e 2 dormitórios; unidade da oferta a confirmar.",
+        "notes": "Campanha oficial anuncia unidades a partir de R$ 232 mil, com condições próprias. Rodapé condiciona comercialização ao registro da incorporação; confirmar abertura e disponibilidade.",
+        "source_refs": [
+          "turn350view3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA014",
@@ -962,7 +1209,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Mundo Park, em Campo Grande, São Paulo, no endereço Avenida Nossa Senhora do Sabará, 4780. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 251501,
+        "max": null,
+        "source_url": "https://www.planoeplano.com.br/imoveis/sp/sao-paulo/apartamentos/campo-grande/mundopark",
+        "source_name": "Plano&Plano",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Condomínio Alvorada, 2 dormitórios, no complexo Mundo Park.",
+        "notes": "A página oficial mostra Alvorada desde R$ 251.501, Sólis desde R$ 262.365 e Aurora sob consulta. Usado o menor preço inicial explícito do complexo; não é faixa de estoque.",
+        "source_refs": [
+          "turn355view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA015",
@@ -1024,7 +1290,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Meu Plano&Interlagos — Fugulin, em Interlagos / Campo Grande, São Paulo, no endereço Rua José Fugulin, 305 (acesso comercial oficial); Rua Zike Tuma, 1037 (complexo). Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 237979,
+        "max": null,
+        "source_url": "https://www.planoeplano.com.br/imoveis/sp/sao-paulo/apartamentos/interlagos/meu-plano-interlagos",
+        "source_name": "Plano&Plano",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Condomínio Fugulin, 2 dormitórios.",
+        "notes": "Preço inicial publicado especificamente na aba Fugulin. Campo Grande e Palmares são condomínios distintos no mesmo complexo e não tiveram seus valores combinados.",
+        "source_refs": [
+          "turn355view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA016",
@@ -1088,7 +1373,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Plano&Mais Interlagos — Reserva, em Jardim Marajoara / Interlagos, São Paulo, no endereço Rua Francisco Felippe Agosti, 97. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 255090,
+        "max": null,
+        "source_url": "https://www.planoeplano.com.br/imoveis/sp/sao-paulo/apartamentos/jardim-marajoara/plano-maisinterlagos",
+        "source_name": "Plano&Plano",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Plano&Mais Interlagos — Reserva, Rua Francisco Felippe Agosti, 97.",
+        "notes": "Preço total inicial no bloco principal oficial; unidade e condições de pagamento devem ser confirmadas.",
+        "source_refs": [
+          "turn355view2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA017",
@@ -1146,7 +1450,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Mundo Apto Elevato Brooklin, em Brooklin / Santo Amaro, São Paulo, no endereço Rua São Sebastião, 360. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 314652,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/mundo-apto-elevato-brooklin",
+        "source_name": "Primeiro Apê SP",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-10",
+        "unit_details": "Studio e 1 dormitório, Rua São Sebastião, 360.",
+        "notes": "Referência comercial atualizada em 10/10/2026; confirma o endereço do lançamento. Valores de outros cadastros com cidade incorreta foram desconsiderados.",
+        "source_refs": [
+          "turn362search6"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA018",
@@ -1203,7 +1526,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Mundo Apto Alto do Ipiranga, em Alto do Ipiranga / Ipiranga, São Paulo, no endereço Rua Salvador Simões, 912. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 233797,
+        "max": null,
+        "source_url": "https://atlasdados.com/sp/lancamento/mundo-apto-alto-do-ipiranga/",
+        "source_name": "Atlas Dados",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "1 dormitório, 25 m², Rua Salvador Simões.",
+        "notes": "Preço total inicial publicado na tabela por tipologia; data específica da tabela não indicada. Não foi usado preço médio ou mediana do bairro.",
+        "source_refs": [
+          "turn362search4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA019",
@@ -1256,7 +1598,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Mundo Apto Elevato Bosque da Saúde, em Bosque da Saúde, São Paulo, no endereço Avenida Itaboraí, 1425. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 227906.02,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/mundo-apto-elevato-bosque-da-saude",
+        "source_name": "Primeiro Apê SP",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-27",
+        "unit_details": "Studio R2V de 21 m² com terraço; unidades maiores possuem outros preços.",
+        "notes": "Menor valor da tabela comercial por tipologia publicada em 27/10/2026. A condição da tipologia de entrada não é automaticamente MCMV.",
+        "source_refs": [
+          "turn368view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "id": "ZSA020",
@@ -1311,7 +1672,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes interessados em Mundo Apto Estação Conceição, em Conceição / Jabaquara, São Paulo, no endereço Avenida do Café, 444. Gostaria de credenciar nossa operação para parceria externa e levar clientes próprios. Poderiam confirmar modalidade PF/PJ aceita, documentos, liberação e estoque atual do empreendimento, comissão efetiva e sua base, eventual rateio, gatilho/prazo de pagamento, regras de registro e proteção do cliente, tabela e materiais atuais e gerente responsável? Peço também quais unidades estão elegíveis ao Minha Casa Minha Vida e a data de abertura das vendas. Obrigado(a)! [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
       "outreach_performed": false,
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 233812,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/sao-paulo/jabaquara/mundo-apto-estacao-conceicao",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Planta de 18 m².",
+        "notes": "Preço inicial informado no anúncio do empreendimento da Avenida do Café; confirmar classificação residencial da unidade e tabela vigente.",
+        "source_refs": [
+          "turn366search21"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1363,7 +1743,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Line Praça da Árvore — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Line Praça da Árvore, em Praça da Árvore / Mirandópolis, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 301000,
+        "max": null,
+        "source_url": "https://emccamp.com.br/empreendimento/line-praca-da-arvore/",
+        "source_name": "Emccamp",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "1 e 2 dormitórios, 31 a 40 m²; unidade da campanha a confirmar.",
+        "notes": "Preço total inicial publicado na página oficial, arredondado em milhares; não implica preço de todas as tipologias.",
+        "source_refs": [
+          "turn377view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1418,7 +1817,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Tech Zona Sul, em Pedreira, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
       "recency_band": "Fase atual confirmada; data de lançamento a confirmar",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "sob_consulta",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://terrarainterlagos.com.br/empreendimento/tech-zona-sul/",
+        "source_name": "Terrara Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Portal identifica mesmo endereço e informa valores sob consulta para o pré-lançamento. Não foram confundidos subsídio ou entrada com preço total.",
+        "source_refs": [
+          "turn381search0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1475,7 +1893,27 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Bio Parque Nabuco — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Bio Parque Nabuco, em Jardim Jabaquara, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 267697,
+        "max": null,
+        "source_url": "https://real21.com.br/bio-parque-nabuco/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09-08",
+        "unit_details": "35,1 m², 2 dormitórios, sem vaga.",
+        "notes": "Valor da tabela por tipologia de 08/09/2026. A fonte comercial usa endereço do estande (Av. João de Luca, 483), confirmado na página oficial; o terreno continua Rua Artur Lobo, 311.",
+        "source_refs": [
+          "turn381search3",
+          "turn388view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1531,7 +1969,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Tee Marajoara — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Tee Marajoara, em Vila Campo Grande / Jardim Marajoara, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente. Divergência interna da fonte: cabeçalho em construção, rodapé de pesquisa/pré-comercialização. Não presumir venda liberada antes da confirmação do RI e da abertura comercial.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 282900,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/tee-marajoara",
+        "source_name": "Primeiro Apê SP",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-16",
+        "unit_details": "HIS2, 37 m², 2 dormitórios, sem vaga.",
+        "notes": "Preço promocional publicado em 16/10/2026; a mesma fonte lista referência não promocional de R$ 317.300. Campanha e abertura efetiva das vendas devem ser confirmadas, pois o rodapé oficial condiciona comercialização ao RI.",
+        "source_refs": [
+          "turn381search4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1586,7 +2043,27 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Spin Zona Sul — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Spin Zona Sul, em Pedreira, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 347000,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/spin-zona-sul",
+        "source_name": "Primeiro Apê SP",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-16",
+        "unit_details": "HIS2, 37 m², 2 dormitórios, com vaga de carro.",
+        "notes": "Preço mínimo por tipologia datado de 16/10/2026. Fonte usa o estande na Av. Sabará, 4885, confirmado pela Econ; o terreno é Rua Antônio do Campo, 345.",
+        "source_refs": [
+          "turn381search5",
+          "turn388view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1638,7 +2115,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Vila Saúde Residencial Conx — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Vila Saúde Residencial Conx, em Saúde, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 270365.37,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/sao-paulo/saude/vila-saude-residencial-conx",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-16",
+        "unit_details": "1 dormitório, 27 m², sem vaga",
+        "notes": "Preço inicial publicado para a menor planta; apartamentos de 2 dormitórios, gardens e unidades com vaga têm valores superiores.",
+        "source_refs": [
+          "turn382search4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1692,7 +2188,26 @@
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Alfredo Santo Amaro, em Santo Amaro, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
       "recency_band": "Fase atual confirmada; data de lançamento a confirmar",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 199306.8,
+        "max": null,
+        "source_url": "https://www.zybro.com.br/place/alfredo-santo-amaro",
+        "source_name": "Zybro",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Studio não residencial (NR), 24,71 m², sem vaga",
+        "notes": "Menor valor da tabela é de studio NR, não apartamento residencial HIS2. Residencial HIS2 de 24,34 m² aparece desde R$ 230.511,40; confirmar disponibilidade e categoria.",
+        "source_refs": [
+          "turn417view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1746,7 +2261,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Abytá Santo Amaro — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Abytá Santo Amaro, em Santo Amaro / Vila Campo Grande, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 290990,
+        "max": null,
+        "source_url": "https://real21.com.br/abyta-santo-amaro/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-12",
+        "unit_details": "34,9 m²; 2 dormitórios; sem vaga",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn379search6"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1802,7 +2336,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — 011 Brooklin Residence — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em 011 Brooklin Residence, em Brooklin, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 479990,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/011-brooklin-residence",
+        "source_name": "Primeiro Apê SP",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-28",
+        "unit_details": "40 ou 41 m²; 2 dormitórios com sacada; R2V; vaga opcional",
+        "notes": "Menor valor do guia divulgado exclui unidades PCD. Vaga vendida separadamente; preço do apartamento não inclui os R$ 120 mil indicados para a vaga.",
+        "source_refs": [
+          "turn379search4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1854,7 +2407,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Breve Lançamento na Chácara Santo Antônio (011 Chácara Santo Antônio) — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Breve Lançamento na Chácara Santo Antônio (011 Chácara Santo Antônio), em Chácara Santo Antônio, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/011-chacara-santo-antonio",
+        "source_name": "Fonte comercial consultada",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Portal informa breve lançamento e preço ainda não divulgado na consulta de 28/10/2026. Não localizado valor verificável para este endereço.",
+        "source_refs": [
+          "turn379search5"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1910,7 +2482,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Aiká — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Aiká, em Planalto Paulista / Moema, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2961060,
+        "max": null,
+        "source_url": "https://real21.com.br/aika/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Unidades de 124,03 a 259,39 m²; Avenida Chibarás, 669.",
+        "notes": "Referência inicial comercial atribuída ao empreendimento CNL. Página oficial segue com informações preliminares; confirmar disponibilidade e abertura comercial.",
+        "source_refs": [
+          "turn384search1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -1966,7 +2557,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — WalkPaulista — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em WalkPaulista, em Paraíso, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 618676.4,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/sao-paulo/paraiso/walkpaulista",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-08-07",
+        "unit_details": "1 dormitório, 31 m².",
+        "notes": "Preço publicado do quadro de áreas em 07/08/2026. Foram descartados os valores estimados por IA ou sob consulta das outras tipologias.",
+        "source_refs": [
+          "turn392search0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2023,7 +2633,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Vinx Jurubatuba Home Resort — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Vinx Jurubatuba Home Resort, em Jurubatuba, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 305800,
+        "max": null,
+        "source_url": "https://juliomartinscorretor.com.br/empreendimentos/vinx-jurubatuba-home-resort-fase-1-2-quartos-jurubatuba-sao-paulo/",
+        "source_name": "Julio Martins Corretor",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Fase 1; 34,02 m²; 2 dormitórios; sem vaga",
+        "notes": "Preço inicial publicado para a fase 1. Ofertas das fases 2 e 3 são diferentes; confirmar qual fase está liberada para parceria e a tabela vigente.",
+        "source_refs": [
+          "turn410search3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2078,7 +2707,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Beat Jardim Botânico — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Beat Jardim Botânico, em Sacomã, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 258600,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/beat-jardim-botanico",
+        "source_name": "Primeiro Apê SP",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-19",
+        "unit_details": "34,1 m², 2 dormitórios, sem vaga.",
+        "notes": "Preço mínimo por tipologia publicado em 19/10/2026; unidade de 33,7 m² com vaga tem referência separada de R$ 323.710, que não é teto geral do empreendimento.",
+        "source_refs": [
+          "turn388view3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2132,7 +2780,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Abytá Nações Unidas — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Abytá Nações Unidas, em Santo Amaro, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 244990,
+        "max": null,
+        "source_url": "https://real21.com.br/abyta-nacoes-unidas/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-22",
+        "unit_details": "26 m²; 1 dormitório; sem vaga",
+        "notes": "Usado o menor valor da tabela por tipologia atualizada em 22/10/2026. O texto introdutório ainda cita R$ 234.990, divergente da tabela. Confirmar fase e unidade com o parceiro.",
+        "source_refs": [
+          "turn407view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2188,7 +2855,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Equale Condomínio Clube — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Equale Condomínio Clube, em Socorro, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 288590,
+        "max": null,
+        "source_url": "https://primeiroapesp.com.br/equale-condominio-clube",
+        "source_name": "Primeiro Apê SP",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-28",
+        "unit_details": "35 m²; 2 dormitórios com sacada; HIS-2; sem vaga",
+        "notes": "Menor valor do guia para unidades não adaptadas PCD. Fonte lista condição PCD menor, com requisitos próprios; confirmar elegibilidade e estoque.",
+        "source_refs": [
+          "turn387view2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2245,7 +2931,27 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Conquista Clube Sacomã — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Conquista Clube Sacomã, em Sacomã / Jardim Santa Emília, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 262500,
+        "max": null,
+        "source_url": "https://real21.com.br/conquista-clube-sacoma/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Fase 1, plantas de 25,91 a 33,53 m².",
+        "notes": "Preço inicial publicado para o lançamento Direcional. Cadastro comercial usa nº 1 da Rua dos Cariris Novos; o oficial do catálogo mantém nº 320, por isso confirmar acesso e unidade com a incorporadora.",
+        "source_refs": [
+          "turn395search2",
+          "turn395search1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2303,7 +3009,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Reserva Sacomã — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Reserva Sacomã, em Jardim Clímax / Sacomã, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://tenda.com/apartamentos-a-venda/sp/sao-paulo/reserva-sacoma",
+        "source_name": "Tenda",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Não localizado preço total verificável do empreendimento. Valores de entrada/ato a partir de R$ 499 e subsídios de até R$ 55 mil não foram usados como valor do apartamento.",
+        "source_refs": [
+          "turn400search9"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2359,7 +3084,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Vivaz Connection Klabin — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Vivaz Connection Klabin, em Chácara Klabin / Vila Mariana, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 284000,
+        "max": null,
+        "source_url": "https://corretorjoseaparecido.com.br/vivaz-connection-klabin",
+        "source_name": "Corretor José Aparecido",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10",
+        "unit_details": "1 dormitório, 24 m²",
+        "notes": "Referência comercial de outubro/2026 para a planta Fit, Rua Saioá; demais plantas sob consulta.",
+        "source_refs": [
+          "turn346search4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2413,7 +3157,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Vivaz Parque João Dias — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Vivaz Parque João Dias, em Jardim São Luís, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 238016,
+        "max": null,
+        "source_url": "https://corretorjoseaparecido.com.br/vivaz-parque-joao-dias",
+        "source_name": "Corretor José Aparecido",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10",
+        "unit_details": "1 dormitório, 24 m²",
+        "notes": "Referência comercial de outubro/2026 para a planta Fit, Avenida Maria Coelho Aguiar; unidades maiores e vagas variam.",
+        "source_refs": [
+          "turn346search6"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "checked_at": "2026-11-02",
@@ -2470,7 +3233,26 @@
       "request_subject": "Credenciamento de parceria externa PF/PJ — Alto Liviero Condomínio Clube — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) PF / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Temos clientes próprios interessados em Alto Liviero Condomínio Clube, em Vila Liviero / Sacomã, São Paulo. Aceitam parceria externa PF/PJ? Poderiam informar o cadastro oficial, gerente responsável, documentação, liberação específica do produto, comissão efetiva/base/rateio/vigência/pagamento, contrato e registro/proteção do cliente? Solicito tabela e materiais atuais, data de abertura de vendas e confirmação das unidades MCMV. [NOME / EMPRESA / CONTATO]",
       "notes": "Pesquisa sem contato ou submissão. Fase, estoque, enquadramento e credenciamento devem ser confirmados comercialmente.",
-      "outreach_performed": false
+      "outreach_performed": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 280000,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/sao-paulo/vila-liviero/alto-liviero-condominio-clube",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Planta de 34 m², 2 dormitórios.",
+        "notes": "Preço inicial informado no anúncio do empreendimento da Av. Carlos Liviero; não representa teto de todas as unidades.",
+        "source_refs": [
+          "turn395search6"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Brooklin Senses by Cyrela",
@@ -2532,7 +3314,26 @@
       "request_subject": "Parceria externa PF/PJ — Brooklin Senses by Cyrela — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Brooklin Senses by Cyrela, Rua Michigan, 922, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2693775,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/sao-paulo/brooklin-senses-by-cyrela",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Apartamentos de 145 a 186 m²; 3 suítes e 2 vagas.",
+        "notes": "Referência anunciada para a torre residencial Brooklin Senses. Compactos com preço inferior em outros portais podem ter produto/tipologia diferentes.",
+        "source_refs": [
+          "turn341view3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Casa Senses",
@@ -2597,7 +3398,26 @@
       "request_subject": "Parceria externa PF/PJ — Casa Senses — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Casa Senses, Rua Michigan, 316, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 4676634,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/sao-paulo/casa-senses",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-15",
+        "unit_details": "Apartamento de 251 m², 4 suítes e 3 vagas.",
+        "notes": "Referência da torre residencial, tabela comercial atribuída a 15/10/2026. Não abrange os studios Casa Senses Apartments, que possuem oferta e condições próprias.",
+        "source_refs": [
+          "turn345search0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "The Palace Oasis",
@@ -2660,7 +3480,26 @@
       "request_subject": "Parceria externa PF/PJ — The Palace Oasis — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao The Palace Oasis, Rua Dona Avelina, 294, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1323881,
+        "max": null,
+        "source_url": "https://real21.com.br/the-palace-oasis/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09-08",
+        "unit_details": "Referência da planta de 82,5 m², 2 dormitórios e 1 vaga.",
+        "notes": "Menor preço entre as tipologias publicadas em tabela comercial atualizada em 08/09/2026. Campanhas de outros portais indicam unidades diferentes; confirmar estoque.",
+        "source_refs": [
+          "turn345search1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "The Palace Royal",
@@ -2727,7 +3566,26 @@
       "request_subject": "Parceria externa PF/PJ — The Palace Royal — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao The Palace Royal, Rua Bartolomeu de Gusmão, 575, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2245128,
+        "max": null,
+        "source_url": "https://altopadraovilamariana.com.br/royal/",
+        "source_name": "iApartamentos — Alto Padrão Vila Mariana",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10",
+        "unit_details": "Apartamento 34, 139 m², 3 suítes e 2 vagas.",
+        "notes": "Preço total de referência publicado em campanha de outubro/2026 com desconto de 11%, sujeito à validade e ao fluxo de tabela; o site calcula o total a partir do valor por m² promocional.",
+        "source_refs": [
+          "turn345search2"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Portrait Parque do Ibirapuera",
@@ -2792,7 +3650,26 @@
       "request_subject": "Parceria externa PF/PJ — Portrait Parque do Ibirapuera — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Portrait Parque do Ibirapuera, Rua do Livramento, 18, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 8240801,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/sao-paulo/portrait-parque-do-ibirapuera",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Unidades de 232,5 a 272,5 m², 4 suítes e 3 vagas.",
+        "notes": "Preço inicial anunciado comercialmente para o Portrait Parque do Ibirapuera. Mantido o endereço do catálogo; a classificação comercial de bairro não altera a pesquisa de localização.",
+        "source_refs": [
+          "turn345search3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "The Garden Klabin",
@@ -2856,7 +3733,26 @@
       "request_subject": "Parceria externa PF/PJ — The Garden Klabin — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao The Garden Klabin, Rua Charles Astor, 33, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 2368000,
+        "max": null,
+        "source_url": "https://www.npiconsultoria.com.br/the-garden-klabin",
+        "source_name": "NPi Consultoria",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Referência de unidades do The Garden Klabin; plantas de 136 a 244 m².",
+        "notes": "Preço anunciado no catálogo comercial que identifica Rua Charles Astor, 33. Outras plataformas usam nº 219; não foram combinados valores entre páginas.",
+        "source_refs": [
+          "turn349search4"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "The Residence Brooklin by Living",
@@ -2919,7 +3815,26 @@
       "request_subject": "Parceria externa PF/PJ — The Residence Brooklin by Living — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao The Residence Brooklin by Living, Rua Indiana, 74, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1498888,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/sao-paulo/the-residence-brooklin-by-living",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-28",
+        "unit_details": "Garden de 94,9 m²; 2 suítes; 1 vaga",
+        "notes": "Menor valor da tabela publicada é da tipologia garden de 94,9 m²; não representa preço de todas as unidades.",
+        "source_refs": [
+          "turn412view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "The New Residence Brooklin by Living",
@@ -2981,7 +3896,26 @@
       "request_subject": "Parceria externa PF/PJ — The New Residence Brooklin by Living — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao The New Residence Brooklin by Living, Rua Pensilvânia, 1411, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 1162251,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/sao-paulo/the-new-residence-brooklin-by-living",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-22",
+        "unit_details": "70,3 m²; 2 dormitórios; 1 suíte; 1 vaga",
+        "notes": "Preço anunciado de referência, sujeito à disponibilidade, tipologia e confirmação da tabela vigente.",
+        "source_refs": [
+          "turn412view1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Mediterranée by Living",
@@ -3043,7 +3977,26 @@
       "request_subject": "Parceria externa PF/PJ — Mediterranée by Living — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Mediterranée by Living, Avenida Mascote, 1171, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "faixa",
+        "min": 988530,
+        "max": 1982989,
+        "source_url": "https://juliomartinscorretor.com.br/empreendimentos/mediterranee-by-living-2-a-3-quartos-vila-mascote-sao-paulo/",
+        "source_name": "Julio Martins Corretor",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "76,9 a 149,8 m²; 2 e 3 suítes; 1 e 2 vagas",
+        "notes": "Faixa expressamente publicada para as tipologias anunciadas; não equivale ao limite de preço de todo o estoque.",
+        "source_refs": [
+          "turn343search7"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Living Dona Brígida II",
@@ -3101,7 +4054,26 @@
       "request_subject": "Parceria externa PF/PJ — Living Dona Brígida II — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Living Dona Brígida II, Rua Dona Brígida, 472, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://www.meuliving.com.br/empreendimentos/living-dona-brigida-ii",
+        "source_name": "Living",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Pré-lançamento: a consulta da página oficial e a busca pelo nome não localizaram preço de venda verificável para este endereço.",
+        "source_refs": [
+          "turn344search12"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Living Otávio Tarquinio",
@@ -3161,7 +4133,26 @@
       "request_subject": "Parceria externa PF/PJ — Living Otávio Tarquinio — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Living Otávio Tarquinio, Rua Otávio Tarquínio de Sousa, 1042, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://www.meuliving.com.br/empreendimentos/living-otavio-tarquinio",
+        "source_name": "Living",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Pré-lançamento: a consulta da página oficial e a busca pelo nome não localizaram preço de venda verificável para este endereço.",
+        "source_refs": [
+          "turn344search14"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Living Antônio das Chagas",
@@ -3219,7 +4210,26 @@
       "request_subject": "Parceria externa PF/PJ — Living Antônio das Chagas — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Living Antônio das Chagas, Rua Antônio das Chagas, 557, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "nao_encontrado",
+        "kind": null,
+        "min": null,
+        "max": null,
+        "source_url": "https://www.meuliving.com.br/empreendimentos/living-antonio-das-chagas",
+        "source_name": "Living",
+        "source_type": "oficial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": null,
+        "notes": "Pré-lançamento: a consulta da página oficial e a busca pelo nome não localizaram preço de venda verificável para este endereço.",
+        "source_refs": [
+          "turn344search13"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Living Full Conceição",
@@ -3285,7 +4295,26 @@
       "request_subject": "Parceria externa PF/PJ — Living Full Conceição — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Living Full Conceição, Av. Eng. Armando de Arruda Pereira, 857, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 265930,
+        "max": null,
+        "source_url": "https://omelhordasconstrutoras.com.br/imovel/living-full-conceicao",
+        "source_name": "O Melhor das Construtoras",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10",
+        "unit_details": "1 e 2 dormitórios; 25 a 37 m²",
+        "notes": "Preço inicial da tabela de outubro de 2026 divulgada pelo portal; confirmar tipologia, enquadramento e disponibilidade.",
+        "source_refs": [
+          "turn344search1"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Blue Marine Home Resort",
@@ -3349,7 +4378,26 @@
       "request_subject": "Parceria externa PF/PJ — Blue Marine Home Resort — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Blue Marine Home Resort, Av. Fagundes Filho, 325, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 294000,
+        "max": null,
+        "source_url": "https://myside.com.br/apartamento-venda-blue-marine-home-resort-sao-paulo-sp",
+        "source_name": "MySide",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "1 dormitório compacto, 25,18 m², sem vaga",
+        "notes": "Valor arredondado anunciado pela fonte para a menor planta. Apartamentos de 1 a 3 dormitórios, até 80 m², têm preços distintos.",
+        "source_refs": [
+          "turn419view0"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "SP_360° Smart Living by Eztec",
@@ -3415,7 +4463,26 @@
       "request_subject": "Parceria externa PF/PJ — SP_360° Smart Living by Eztec — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao SP_360° Smart Living by Eztec, Alameda dos Pamaris, 282, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 356255,
+        "max": null,
+        "source_url": "https://apto.vc/br/sp/sao-paulo/moema/sp360-smart-living-by-eztec",
+        "source_name": "Apto",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": null,
+        "unit_details": "Studio de 24 m²",
+        "notes": "Preço inicial publicado para a planta de 24 m²; outras metragens e categorias residenciais/não residenciais precisam de tabela específica.",
+        "source_refs": [
+          "turn391view3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Agami Park Residences",
@@ -3480,7 +4547,26 @@
       "request_subject": "Parceria externa PF/PJ — Agami Park Residences — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Agami Park Residences, Avenida Agami, 220, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 6620410,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/sao-paulo/agami-park-residences",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-10-05",
+        "unit_details": "215,18 m², 3 suítes e 3 vagas",
+        "notes": "Preço inicial do apartamento tipo. Gardens e coberturas de até 571,75 m² são categorias superiores, anunciadas separadamente; disponibilidade a confirmar.",
+        "source_refs": [
+          "turn364search3"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "Stay Moema by Helbor",
@@ -3543,7 +4629,26 @@
       "request_subject": "Parceria externa PF/PJ — Stay Moema by Helbor — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao Stay Moema by Helbor, Rua Araguari, 801, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 844750,
+        "max": null,
+        "source_url": "https://real21.com.br/stay-moema-by-helbor/",
+        "source_name": "Real 21",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-09-06",
+        "unit_details": "Unidade de 27,9 m², sem vaga; tabela também mostra 37,7 m² a R$ 1.169.910.",
+        "notes": "Menor valor publicado na tabela por tipologia de 06/09/2026. Confirmar condições de mobília e equipamentos da unidade no contrato.",
+        "source_refs": [
+          "turn369search7"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     },
     {
       "name": "BRK by Helbor",
@@ -3604,7 +4709,26 @@
       "request_subject": "Parceria externa PF/PJ — BRK by Helbor — São Paulo",
       "request_template": "Olá! Sou [NOME], [corretor(a) autônomo(a) / responsável pela IMOBILIÁRIA], CRECI [NÚMERO]. Quero credenciar nossa operação para levar clientes próprios ao BRK by Helbor, Rua Pássaros e Flores, 30, São Paulo. Podem informar o responsável por parcerias externas, requisitos PF/PJ, documentos e liberação do produto? Peço também a comissão efetiva do parceiro e sua base/rateio, gatilho e prazo de pagamento, regra de cadastro e proteção do lead, tabela vigente e materiais autorizados. [NOME / EMPRESA / TELEFONE]",
       "property_type": "Apartamento",
-      "autonomous_submission_authorized": false
+      "autonomous_submission_authorized": false,
+      "pricing": {
+        "currency": "BRL",
+        "status": "publicado",
+        "kind": "a_partir_de",
+        "min": 776250,
+        "max": null,
+        "source_url": "https://www.grandoimoveis.com.br/lancamentos/sao-paulo/brk-by-helbor",
+        "source_name": "Grando Imóveis",
+        "source_type": "comercial",
+        "checked_at": "2026-11-02",
+        "price_date": "2026-08-28",
+        "unit_details": "Studio residencial de 41,09 m², sem vaga.",
+        "notes": "Tabela comercial atribuída a 28/08/2026. Valor da tipologia residencial; não são salas comerciais do mesmo empreendimento.",
+        "source_refs": [
+          "turn369search5"
+        ],
+        "is_historical": false,
+        "valid_until": null
+      }
     }
   ],
   "partners": [
@@ -4668,5 +5792,33 @@
         "https://www.meuliving.com.br/busca"
       ]
     }
-  ]
+  ],
+  "pricing_research": {
+    "checked_at": "2026-11-02",
+    "projects_reviewed": 59,
+    "with_public_price": 53,
+    "by_status": {
+      "publicado": 53,
+      "sob_consulta": 1,
+      "nao_encontrado": 5
+    },
+    "by_source_type_with_price": {
+      "oficial": 12,
+      "comercial": 41
+    },
+    "by_price_kind": {
+      "a_partir_de": 50,
+      "unidade_anunciada": 2,
+      "faixa": 1
+    },
+    "historical_references": 0,
+    "methodology": [
+      "Consulta de preços realizada em 02/11/2026 para os 198 empreendimentos dos três arquivos. Cada referência mantém fonte, data e tipologia quando identificada.",
+      "Prioridade para fonte oficial; fonte comercial identificada quando não foi encontrada uma referência oficial suficiente. Preço total em BRL, sem inferir preço a partir de metragem.",
+      "A partir de é referência inicial anunciada, com máximo desconhecido. Faixa cobre somente as plantas ou unidades explicitamente publicadas na fonte, não todo o estoque. Unidade anunciada é um valor específico sem faixa confirmada.",
+      "Entrada, parcelas, subsídio, renda, avaliação, teto regulatório HIS/HMP, estimativas por IA, valores por m² sem total e anúncios de identidade não confirmada foram excluídos dos campos numéricos.",
+      "Data da consulta não equivale à data da tabela. Referências explicitamente antigas ou com validade vencida são marcadas como históricas; toda referência exige confirmação da tabela e da disponibilidade.",
+      "A busca de preços não altera o enquadramento MCMV, estágio, endereço, identidade ou aprovação de parceria. Não houve contato nem solicitação às empresas."
+    ]
+  }
 }
