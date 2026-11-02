@@ -1,0 +1,29 @@
+title: DYHOUSE · Parcerias imobiliárias
+description: Empreendimentos e caminhos para parceria em São Paulo, Barueri e Alphaville.
+theme: null
+
+# GitHub Pages: Deploy from a branch → main → / (root).
+# Jekyll renderiza apenas o catálogo Liquid; os arquivos do painel são estáticos.
+# Não adicione .nojekyll: ele desativaria a descoberta automática dos novos JSON.
+exclude:
+  - acompanhamento
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - tests
+  - exemplos
+  - server.mjs
+  - package.json
+  - package-lock.json
+  - README.md
+  - iniciar-mac-linux.sh
+  - iniciar-windows.bat
+  - parcerias.html
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: null
