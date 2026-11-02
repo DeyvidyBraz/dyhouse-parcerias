@@ -2,9 +2,66 @@
 
 **[Abrir o site público](https://deyvidybraz.github.io/dyhouse-parcerias/)** · **[Arquivos de pesquisa](https://github.com/DeyvidyBraz/dyhouse-parcerias/tree/main/dist/dados)** · **[Modelo de novo lote](exemplos/novo-lote.exemplo.json)**
 
-Página HTML para explorar pesquisas, acrescentar novos lotes JSON e acompanhar o contato de parceria de cada empreendimento. A entrega reúne **139 empreendimentos**: os 100 da pesquisa de São Paulo e **39 de Alphaville/Barueri**, conferidos em 02/11/2026. A importação consolida registros repetidos, mantém as fontes e expõe divergências para revisão.
+Página HTML para explorar pesquisas, acrescentar novos lotes JSON e acompanhar o contato de parceria de cada empreendimento. A base reúne **198 empreendimentos**, incluindo **118 na Zona Sul de São Paulo capital**. São 159 na capital e **39 em Alphaville/Barueri**. A expansão de 02/11/2026 acrescenta 59 produtos à base anterior de 139. A importação consolida registros repetidos, mantém as fontes e expõe divergências para revisão.
 
 Os filtros incluem empresa, **cidade**, região, bairro, tipo, MCMV, estágio, ano e **status da sua parceria**. Alphaville aparece como localização/bairro; os municípios da nova pesquisa são **Barueri (35)** e **Santana de Parnaíba (4)**.
+
+## Expansão da Zona Sul — 02/11/2026
+
+O novo arquivo **[empreendimentos_parcerias_zona_sul_2026-11-02.json](dist/dados/empreendimentos_parcerias_zona_sul_2026-11-02.json)** acrescenta **59 empreendimentos**, com fontes, datas, caminhos PF/PJ, próximos passos e mensagens preparadas para cada produto. A Zona Sul passa de 59 para **118**, após a consolidação dos três arquivos. Há **48 canais de parceria** na base completa, considerando a consolidação de canais repetidos entre lotes.
+
+| Empresa / grupo de marcas | Novos produtos |
+|---|---:|
+| Cyrela / Living, incluindo Casa Senses com Hines | 13 |
+| Vibra | 7 |
+| Metrocasa | 5 |
+| Econ | 5 |
+| Riva | 5 |
+| Plano&Plano | 4 |
+| Mundo Apto | 4 |
+| EZTEC | 3 |
+| CNL / NewProperties | 2 |
+| Conx | 2 |
+| Direcional | 2 |
+| Helbor | 2 |
+| Vivaz | 2 |
+| Emccamp | 1 |
+| Vinx | 1 |
+| Tenda | 1 |
+| **Total acrescentado** | **59** |
+
+No novo lote, **14** produtos têm MCMV mencionado em fonte oficial, **12** em fonte comercial identificada e **33** permanecem a confirmar. O ano de lançamento está registrado como 2025 em 35 produtos e 2026 em 15; os outros 9 preservam ano não confirmado, incluindo pré-lançamentos e divergências de data. Data de RI, alvará ou impressão de material não foi convertida em data de lançamento.
+
+As rotas principais do novo lote se dividem em **31 produtos com categoria A**, **13 com B** e **15 com C**. A significa programa/cadastro identificado; B indica canal profissional com fluxo ou condições pendentes; C é encaminhamento comercial oficial cuja aceitação de parceria externa precisa ser confirmada. Nenhuma categoria significa parceria já aprovada. Comissão, rateio, contratação PF/PJ, liberação do empreendimento e proteção de cliente continuam sujeitos à confirmação comercial.
+
+### Base de vendas usada para priorizar
+
+Foram conferidos os relatórios da **PMI/Secovi-SP de dezembro de 2025 e janeiro de 2026**, referentes a imóveis residenciais novos na capital. A soma abaixo é calculada a partir das tabelas mensais:
+
+| Região | Dezembro/2025 | Janeiro/2026 | Soma dos dois meses |
+|---|---:|---:|---:|
+| **Sul** | **3.205** | **2.281** | **5.486** |
+| Leste | 2.391 | 2.559 | 4.950 |
+| Oeste | 2.150 | 1.683 | 3.833 |
+| Norte | 1.216 | 965 | 2.181 |
+| Centro | 760 | 642 | 1.402 |
+| **Capital** | **9.722** | **8.130** | **17.852** |
+
+A Zona Sul concentra aproximadamente **30,7%** das vendas somadas; janeiro isolado foi liderado pela Zona Leste. Na capital inteira, o segmento econômico/MCMV da pesquisa representou **69%** das vendas de dezembro e **74%** das de janeiro; apartamentos de dois dormitórios, **66%** e **73%**, respectivamente.
+
+Esses dados orientam a busca por produtos econômicos e de dois dormitórios na Zona Sul, com opções recentes nos corredores de Santo Amaro/Chácara Santo Antônio, Campo Grande/Interlagos/Jurubatuba/Socorro, Campo Limpo/Jardim São Luís, Ipiranga/Sacomã e Saúde/Jabaquara. Brooklin, Campo Belo, Moema e Vila Mariana também receberam opções para outros perfis de cliente. **A prioridade de bairros é operacional: não foi validado um ranking mensal de vendas por bairro.** Os percentuais por tipologia e MCMV são da capital, sem cruzamento comprovado com cada bairro.
+
+Fontes: [PMI dezembro/2025, páginas 11–12](https://secovi.com.br/wp-content/uploads/2026/02/202512-pmi.pdf), [PMI janeiro/2026, página 12](https://secovi.com.br/reader/pdfjs/web/viewer.html?f=2026%2F03%2F202601-pmi.pdf) e [divulgação oficial de janeiro](https://secovi.com.br/secovi-sp-divulga-dados-de-janeiro-do-mercado-imobiliario-2/). Para janeiro foi adotada a tabela, com 2.559 vendas na Leste e soma regional de 8.130; o texto corrido da notícia contém 2.259. Oferta, lançamentos, VGV e registros de ITBI com usados não foram usados como substitutos das vendas de imóveis novos.
+
+### Identidade e ressalvas da expansão
+
+Plano&Vista Santo Amaro foi excluído por ser renome de Oaz Club Santo Amaro, já presente. Living Guaratuba foi tratado como alias de Living Full Conceição. Mundo Park aparece uma vez, sem multiplicar seus condomínios. Versões de studios do mesmo produto não viraram linhas adicionais.
+
+O alerta automático entre **The Residence Brooklin** e **The New Residence Brooklin** foi revisado: o primeiro fica na Rua Indiana, 74; o segundo na Rua Pensilvânia, 1411. Permanecem separados. O alerta anterior Alameda/BLVD. Alti também permanece para consulta. Divergências internas das fontes, como as datas do Vibra Sabará e a fase do Abytá Nações Unidas, estão descritas nas fichas.
+
+Esta rodada verificou os 59 registros acrescentados. Os 139 anteriores foram preservados. **Nenhum contato ou pedido de parceria foi enviado.** Os links e instruções descrevem caminhos de solicitação; as marcações e a linha do tempo continuam sendo o acompanhamento pessoal de cada usuário.
+
+Para consultar o recorte, abra o site, clique em **Atualizar**, selecione **Cidade → São Paulo** e **Região → Sul**. Os filtros de empresa, bairro, MCMV, estágio, ano, verificação do canal e status de parceria continuam disponíveis.
 
 ## Acrescentar arquivos pelo GitHub
 
