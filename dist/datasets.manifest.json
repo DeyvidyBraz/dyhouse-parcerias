@@ -1,0 +1,31 @@
+---
+layout: null
+---
+{%- assign data_prefix = "/dist/dados/" -%}
+{%- assign prefix_length = data_prefix | size -%}
+{%- assign static_files = site.static_files | sort: "path" -%}
+{%- assign first_file = true -%}
+{
+  "schemaVersion": 1,
+  "description": "Catálogo gerado automaticamente pelo GitHub Pages a partir dos JSON em dist/dados/.",
+  "files": [
+    {%- for file in static_files -%}
+      {%- assign path_prefix = file.path | slice: 0, prefix_length -%}
+      {%- assign extension = file.extname | downcase -%}
+      {%- if path_prefix == data_prefix and extension == ".json" -%}
+        {%- assign relative_path = file.path | remove_first: data_prefix -%}
+        {%- assign segments = relative_path | split: "/" -%}
+        {%- capture encoded_path -%}
+          {%- for segment in segments -%}
+            {%- unless forloop.first -%}/{%- endunless -%}
+            {{- segment | url_encode | replace: "+", "%20" -}}
+          {%- endfor -%}
+        {%- endcapture -%}
+        {%- assign data_url = encoded_path | prepend: "./dados/" -%}
+        {%- unless first_file -%},{%- endunless -%}
+        {"fileName":{{ relative_path | jsonify }},"url":{{ data_url | jsonify }}}
+        {%- assign first_file = false -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
