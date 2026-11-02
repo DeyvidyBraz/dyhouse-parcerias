@@ -4,7 +4,65 @@
 
 Página HTML para explorar pesquisas, acrescentar novos lotes JSON e acompanhar o contato de parceria de cada empreendimento. A base reúne **198 empreendimentos**, incluindo **118 na Zona Sul de São Paulo capital**. São 159 na capital e **39 em Alphaville/Barueri**. A expansão de 02/11/2026 acrescenta 59 produtos à base anterior de 139. A importação consolida registros repetidos, mantém as fontes e expõe divergências para revisão.
 
-Os filtros incluem empresa, **cidade**, região, bairro, tipo, MCMV, estágio, ano e **status da sua parceria**. Alphaville aparece como localização/bairro; os municípios da nova pesquisa são **Barueri (35)** e **Santana de Parnaíba (4)**.
+Os filtros incluem empresa, **cidade**, região, bairro, tipo, MCMV, estágio, ano, **preço de referência** e **status da sua parceria**. Alphaville aparece como localização/bairro; os municípios da nova pesquisa são **Barueri (35)** e **Santana de Parnaíba (4)**.
+
+## Preços de referência — pesquisa de 02/11/2026
+
+Os **198 empreendimentos** foram consultados para localizar preços totais de venda. Os valores estão no objeto `pricing` de cada empreendimento, nos **três arquivos originais** de `dist/dados/`. A atualização não cria empreendimentos extras nem altera suas identidades.
+
+| Cobertura | Com preço | Total pesquisado |
+|---|---:|---:|
+| Catálogo completo | **170** | **198** |
+| Zona Sul de São Paulo | **103** | **118** |
+| São Paulo capital, todas as regiões | **136** | **159** |
+| Barueri | **31** | **35** |
+| Santana de Parnaíba | **3** | **4** |
+
+Entre os 170 preços, **28** têm fonte oficial e **142**, fonte comercial identificada. São **154** referências “a partir de”, **9** faixas anunciadas e **7** valores de unidade anunciada. Os demais registros estão como **14 sob consulta** e **14 sem preço verificável localizado**. Duas referências são marcadas históricas: Dellagio (tabela de maio/2026) e Parque das Perdizes (tabela com validade encerrada em 01/11/2026).
+
+### Na interface
+
+- **Tabela e cartões:** preço visível, natureza da referência, tipologia quando conhecida, categoria da fonte e data da consulta. Referências históricas têm aviso próprio.
+- **Detalhes:** valor em destaque, link da fonte, data da oferta quando publicada, tipologia, validade e ressalvas específicas.
+- **Filtro opcional:** campos **De** e **Até**, digitáveis com máscara brasileira. `300000` significa **R$ 300.000,00**; também aceita colar `R$ 300.000,00`. Textos, sinais e formatos ambíguos são rejeitados com aviso, preservando o valor anterior.
+- **Critério do filtro:** faixas publicadas são incluídas quando se cruzam com o intervalo desejado. Para “a partir de” ou uma unidade anunciada, compara-se apenas o valor conhecido; não se inventa o teto do empreendimento. Sem preço fica fora enquanto um limite estiver ativo. Limites são inclusivos; mínimo maior que máximo gera aviso.
+- **Ordenação:** menor ou maior preço de referência; empreendimentos sem preço ficam ao final. A ordenação usa o mínimo conhecido.
+- **Exportação:** JSON preserva `pricing` e o histórico. CSV traz valor, mínimo, máximo, tipologia, fonte, datas, validade, indicação histórica e ressalvas.
+
+### Como interpretar os valores
+
+As referências servem para ter noção do patamar de preço. **Não são garantia de estoque nem substituem a tabela vigente da incorporadora.** Data da consulta é diferente da data da tabela; quando a fonte só informa mês/ano, a interface mantém essa precisão. Uma faixa descreve as plantas ou unidades com preços publicados na fonte, não necessariamente todo o estoque do produto.
+
+Preços de compactos, unidades NR, HIS/HMP, apartamentos maiores e lotes são acompanhados da tipologia, quando identificada. **Entrada, prestação, subsídio, renda, avaliação, tetos regulatórios HIS/HMP, estimativas por IA e cálculo de preço por m² não foram usados como preço total de venda.** O enriquecimento de preço não altera a classificação MCMV do empreendimento.
+
+Exemplos conferidos: [Vibra Rio Bonito — fonte oficial](https://www.vibraresidencial.com.br/produtos/vibra-rio-bonito/), [Plano&Park Santo Amaro — fonte oficial](https://www.planoeplano.com.br/imoveis/sp/sao-paulo/apartamentos/santo-amaro/planopark-santo-amaro), [Line Praça da Árvore — fonte oficial](https://emccamp.com.br/empreendimento/line-praca-da-arvore/) e [Metrocasa Viva Campo Limpo — fonte comercial](https://real21.com.br/metrocasa-viva-campo-limpo/). Cada um dos 198 registros contém a fonte consultada e as limitações da pesquisa em seu próprio objeto `pricing`.
+
+### Formato para novos arquivos
+
+O campo é opcional para manter compatibilidade com arquivos antigos. Sem ele, a página mostra **Preço não localizado**. O [modelo de lote](exemplos/novo-lote.exemplo.json) inclui uma referência fictícia para demonstrar a estrutura.
+
+```json
+"pricing": {
+  "currency": "BRL",
+  "status": "publicado",
+  "kind": "a_partir_de",
+  "min": 300000,
+  "max": null,
+  "source_url": "https://example.com/fonte-do-preco",
+  "source_name": "Nome da fonte",
+  "source_type": "oficial",
+  "checked_at": "2026-11-02",
+  "price_date": "2026-10",
+  "unit_details": "Exemplo fictício: 35 m², 1 dormitório",
+  "notes": "Descreva a unidade, a oferta e as condições da referência.",
+  "is_historical": false,
+  "valid_until": null
+}
+```
+
+`status` aceita `publicado`, `sob_consulta` ou `nao_encontrado`; `kind` aceita `a_partir_de`, `faixa` ou `unidade_anunciada`. Use `null` em `kind`, `min` e `max` quando não houver valor. Faixa exige mínimo e máximo publicados e coerentes. Valores numéricos são reais, sem símbolos e sem separador de milhares; centavos usam ponto no JSON, como `210900.01`. `source_type` é `oficial` ou `comercial`. Datas usam `YYYY-MM-DD`, e `price_date` pode usar `YYYY-MM` quando só o mês é conhecido.
+
+Ao consolidar uma nova pesquisa do mesmo empreendimento, o preço é escolhido pela sua própria data de consulta. Valor, máximo, tipologia e fonte são tratados juntos; a página não combina trechos de ofertas diferentes. Referências anteriores continuam no histórico, e diferenças são sinalizadas em **Fontes & versões**. Os status e notas de acompanhamento continuam vinculados ao empreendimento.
 
 ## Expansão da Zona Sul — 02/11/2026
 
