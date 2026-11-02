@@ -1,4 +1,4 @@
-import { ingestDatasets, filterProjects, buildFacets, MCMV_LABELS, STAGE_LABELS, AI_LABELS, normalizeText, PARTNERSHIP_STATUS_LABELS, TRACKING_SCHEMA, normalizeTracking, validateTrackingEnvelope, mergeTracking, applyPartnershipTracking, updatePartnershipTracking } from './data-core.js';
+import { ingestDatasets, filterProjects, buildFacets, MCMV_LABELS, STAGE_LABELS, AI_LABELS, normalizeText, PARTNERSHIP_STATUS_LABELS, TRACKING_SCHEMA, normalizeTracking, validateTrackingEnvelope, mergeTracking, applyPartnershipTracking, updatePartnershipTracking, PRICE_KIND_LABELS, formatBRL, parseBRLInput, maskBRLInput, priceLabel } from './data-core.js';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -46,11 +46,16 @@ function readableDate(value) {
   const d = new Date(value);
   return Number.isNaN(d.getTime()) ? txt(value) : d.toLocaleDateString('pt-BR', {timeZone:'UTC'});
 }
+function readableOfferDate(value) {
+  const month=/^(\d{4})-(\d{2})$/.exec(txt(value));
+  if(month)return `${month[2]}/${month[1]}`;
+  return /^\d{4}-\d{2}-\d{2}$/.test(txt(value))?readableDate(value):txt(value);
+}
 function formatNumber(value) { return Number(value || 0).toLocaleString('pt-BR'); }
 function toast(message) { $('#toast').textContent = message; $('#toast').hidden = false; clearTimeout(toast.timer); toast.timer = setTimeout(() => { $('#toast').hidden = true; }, 4500); }
 function openDialog(id) { const el = document.getElementById(id); if (!el.open) el.showModal(); }
 function closeDialog(id) { document.getElementById(id)?.close(); }
-const emptyFilters = () => ({query:'',companies:[],cities:[],zones:[],neighborhoods:[],mcmv:[],stages:[],years:[],routeQualities:[],ai:[],contactStatuses:[],partnershipStatuses:[],propertyTypes:[],onlyConflicts:false,onlyDuplicates:false,onlyPossibleDuplicates:false});
+const emptyFilters = () => ({query:'',companies:[],cities:[],zones:[],neighborhoods:[],mcmv:[],stages:[],years:[],routeQualities:[],ai:[],contactStatuses:[],partnershipStatuses:[],propertyTypes:[],priceMin:null,priceMax:null,onlyConflicts:false,onlyDuplicates:false,onlyPossibleDuplicates:false});
 const FILTER_LABELS = {companies:'Empresa',cities:'Cidade',zones:'Região',neighborhoods:'Bairro',mcmv:'MCMV',stages:'Estágio',years:'Ano de lançamento',routeQualities:'Canal',ai:'Solicitação por IA',contactStatuses:'Contato na pesquisa',partnershipStatuses:'Minha parceria',propertyTypes:'Tipo'};
 const state = {
   model:null, facets:{}, baseFiles:[], extraFiles:[], folderFiles:[], loadErrors:[], baseMode:'loading', baseLabel:'Base inicial', useBase:true,
@@ -66,8 +71,9 @@ try {
       if (Array.isArray(state.filters[key]) && Array.isArray(settings.filters?.[key])) state.filters[key] = settings.filters[key].map(String).slice(0,200);
       else if (typeof state.filters[key] === 'boolean') state.filters[key] = settings.filters?.[key] === true;
       else if (key === 'query' && typeof settings.filters?.query === 'string') state.filters.query = settings.filters.query.slice(0,300);
+      else if (key === 'priceMin' || key === 'priceMax') state.filters[key] = parseBRLInput(settings.filters?.[key]);
     }
-    if (['original','name','company','city','zone','recent','conflicts'].includes(settings.sort)) state.sort=settings.sort;
+    if (['original','name','company','city','zone','recent','conflicts','priceAsc','priceDesc'].includes(settings.sort)) state.sort=settings.sort;
     if ([25,50,100].includes(settings.pageSize)) state.pageSize=settings.pageSize;
   }
 } catch { /* Private browsing may disable local storage. */ }
@@ -395,6 +401,7 @@ function renderFilters() {
   $('#filter-groups').innerHTML=`<details class="filter-group" data-group="companies" open><summary>Empresa</summary><input class="filter-search" id="company-filter-search" type="search" placeholder="Encontrar empresa…" aria-label="Encontrar empresa no filtro" value="${escapeHtml(companySearch)}"><div class="filter-options" id="company-options">${checkOptions('companies')}</div></details>
     <details class="filter-group" data-group="cities" open><summary>Cidade</summary><div class="filter-options">${checkOptions('cities')}</div></details>
     <details class="filter-group" data-group="zones" open><summary>Região</summary><div class="zone-options">${optionsFor('zones').map(o=>`<button class="zone-chip ${state.filters.zones.includes(o.value)?'active':''}" data-toggle-zone="${escapeHtml(o.value)}" aria-pressed="${state.filters.zones.includes(o.value)}">${escapeHtml(o.label)}</button>`).join('')}</div>${selectFilter('neighborhoods')}</details>
+    <details class="filter-group" data-group="price" open><summary>Preço de referência</summary><div class="price-filter-fields"><label for="price-min">De<input id="price-min" data-price-filter="priceMin" type="text" inputmode="decimal" autocomplete="off" placeholder="Sem mínimo" aria-label="Preço mínimo em reais" aria-describedby="price-filter-help price-filter-error" value="${escapeHtml(formatBRL(state.filters.priceMin))}"></label><label for="price-max">Até<input id="price-max" data-price-filter="priceMax" type="text" inputmode="decimal" autocomplete="off" placeholder="Sem máximo" aria-label="Preço máximo em reais" aria-describedby="price-filter-help price-filter-error" value="${escapeHtml(formatBRL(state.filters.priceMax))}"></label></div><p id="price-filter-help" class="price-filter-help">Digite em reais. Usa a faixa anunciada ou o valor “a partir de”. Sem preço ficam fora ao filtrar.</p><p id="price-filter-error" class="price-filter-error" role="status" hidden></p></details>
     <details class="filter-group" data-group="partnershipStatuses" open><summary>Minha parceria</summary><div class="filter-options">${checkOptions('partnershipStatuses')}</div></details>
     <details class="filter-group" data-group="mcmv" open><summary>Minha Casa Minha Vida</summary><div class="filter-options">${checkOptions('mcmv')}</div></details>
     <details class="filter-group" data-group="propertyTypes"><summary>Tipo de empreendimento</summary><div class="filter-options">${checkOptions('propertyTypes')}</div></details>
@@ -402,15 +409,23 @@ function renderFilters() {
     <details class="filter-group" data-group="more"><summary>Parceria & qualidade</summary>${selectFilter('routeQualities','Verificação do canal')}${selectFilter('ai')}${selectFilter('contactStatuses')}<div class="filter-options"><label class="check-row"><input type="checkbox" data-boolean-filter="onlyConflicts" ${state.filters.onlyConflicts?'checked':''}><span>Com divergências entre arquivos</span></label><label class="check-row"><input type="checkbox" data-boolean-filter="onlyDuplicates" ${state.filters.onlyDuplicates?'checked':''}><span>Repetidos já consolidados</span></label><label class="check-row"><input type="checkbox" data-boolean-filter="onlyPossibleDuplicates" ${state.filters.onlyPossibleDuplicates?'checked':''}><span>Possíveis duplicidades</span></label></div></details>`;
   $$('#filter-groups details').forEach(d=>{if(openState.has(d.dataset.group))d.open=openState.get(d.dataset.group);});
   filterCompaniesInSidebar(companySearch);
+  renderPriceFilterError();
 }
 function filterCompaniesInSidebar(query) {const term=normalizeText(query);$$('#company-options .check-row').forEach(el=>{el.hidden=!el.dataset.optionText.includes(term);});}
-function filterSize() {return Object.values(state.filters).reduce((n,v)=>n+(Array.isArray(v)?v.length:typeof v==='boolean'?(v?1:0):v?1:0),0);}
+function filterSize() {return Object.values(state.filters).reduce((n,v)=>n+(Array.isArray(v)?v.length:typeof v==='boolean'?(v?1:0):typeof v==='number'?(Number.isFinite(v)?1:0):v?1:0),0);}
+function priceRangeInvalid() {return state.filters.priceMin!==null&&state.filters.priceMax!==null&&state.filters.priceMin>state.filters.priceMax;}
+function renderPriceFilterError() {
+  const invalid=priceRangeInvalid(),el=$('#price-filter-error');
+  if(el){el.hidden=!invalid;el.textContent=invalid?'O mínimo deve ser menor ou igual ao máximo.':'';}
+  $$('[data-price-filter]').forEach(input=>input.setAttribute('aria-invalid',String(invalid)));
+}
 function labelFor(key,value) {return optionsFor(key).find(o=>String(o.value)===String(value))?.label||String(value);}
 function renderActiveFilters() {
   const chips=[];
   for(const [key,value] of Object.entries(state.filters)) {
     if(Array.isArray(value)) value.forEach(v=>chips.push({key,value:v,label:`${FILTER_LABELS[key]}: ${labelFor(key,v)}`}));
     else if(key==='query'&&value) chips.push({key,value:'',label:`Busca: ${value}`});
+    else if((key==='priceMin'||key==='priceMax')&&typeof value==='number') chips.push({key,value:'',label:`Preço ${key==='priceMin'?'de':'até'}: ${formatBRL(value)}`});
     else if(value===true) chips.push({key,value:'',label:({onlyConflicts:'Com divergências',onlyDuplicates:'Repetidos consolidados',onlyPossibleDuplicates:'Possíveis duplicidades'})[key]||key});
   }
   $('#active-filters').innerHTML=chips.map(c=>`<button class="active-chip" data-remove-filter="${c.key}" data-remove-value="${escapeHtml(c.value)}" aria-label="Remover filtro ${escapeHtml(c.label)}">${escapeHtml(c.label)}${icon('close')}</button>`).join('');
@@ -432,22 +447,36 @@ function filteredProjects() {
   if(state.sort==='zone') projects.sort((a,b)=>compare(a.normalized.zone,b.normalized.zone)||compare(a.neighborhood,b.neighborhood)||compare(a.name,b.name));
   if(state.sort==='recent') projects.sort((a,b)=>(Date.parse(b.checked_at)||0)-(Date.parse(a.checked_at)||0)||compare(a.name,b.name));
   if(state.sort==='conflicts') projects.sort((a,b)=>b.conflicts.length-a.conflicts.length||compare(a.name,b.name));
+  if(state.sort==='priceAsc'||state.sort==='priceDesc') projects.sort((a,b)=>{
+    const left=a.pricing?.status==='publicado'?a.pricing.min:null,right=b.pricing?.status==='publicado'?b.pricing.min:null;
+    if(left===null||right===null)return left===null&&right===null?compare(a.name,b.name):left===null?1:-1;
+    return (state.sort==='priceAsc'?left-right:right-left)||compare(a.name,b.name);
+  });
   return projects;
 }
 function projectFlag(p) {return p.conflicts.length?`<div class="quality-dots"><span title="Há informações divergentes entre as fontes">${p.conflicts.length} divergência(s)</span></div>`:p.occurrences>1?`<span class="cell-secondary">${p.occurrences} registros consolidados</span>`:'';}
 function partnershipBadge(p) {const status=p.normalized.partnershipStatus||'nao_solicitada';return `<span class="partnership-badge status-${status}" title="Marcação do usuário">${escapeHtml(PARTNERSHIP_STATUS_LABELS[status])}${p.partnershipTracking?.events?.filter(event=>event.kind==='note').length?` · ${p.partnershipTracking.events.filter(event=>event.kind==='note').length} nota(s)`:''}</span>`;}
 function propertyBadge(p) {return p.property_type && !/^apartamento$/i.test(p.property_type)?badge(p.property_type,'amber'):'';}
-function projectRow(p,index) {
-  return `<tr><td><div class="project-cell"><span class="project-avatar tone-${index%4}">${icon('building')}</span><div><button class="project-name" data-project-id="${p.canonicalId}">${escapeHtml(p.name)}</button><span class="project-code">${escapeHtml(projectCode(p))}</span>${partnershipBadge(p)}${propertyBadge(p)}${projectFlag(p)}</div></div></td><td class="company-cell">${escapeHtml(companyName(p))}</td><td class="location-cell">${escapeHtml(p.neighborhood||'Bairro não informado')}<span class="cell-secondary">${escapeHtml(p.normalized.city)} · ${escapeHtml(p.normalized.zone)}</span></td><td>${badge(mcmvShort(p.normalized.mcmv),mcmvTone(p.normalized.mcmv),p.mcmv_evidence)}</td><td class="stage-column">${badge(STAGE_LABELS[p.normalized.stage]||p.stage,'neutral',p.stage)}<span class="cell-secondary">${p.normalized.year||'Data a confirmar'}</span></td><td><button class="row-detail" data-project-id="${p.canonicalId}" aria-label="Ver detalhes de ${escapeHtml(p.name)}">${icon('chevron-right')}</button></td></tr>`;
+function priceSummary(p) {
+  const price=p.pricing,published=price?.status==='publicado';
+  return `<div class="price-summary ${published?'':'price-unknown'}"><span class="price-value">${escapeHtml(priceLabel(price))}</span>${published?`<span class="price-kind">${price.kind==='a_partir_de'?'':escapeHtml(PRICE_KIND_LABELS[price.kind])+' · '}${price.source_type==='oficial'?'fonte oficial':price.source_type==='comercial'?'fonte comercial':'fonte consultada'}</span>${price.unit_details?`<span class="price-unit" title="${escapeHtml(price.unit_details)}">${escapeHtml(price.unit_details)}</span>`:''}`:''}${price?.checked_at?`<span class="price-date">Consulta: ${escapeHtml(readableDate(price.checked_at))}</span>`:''}${price?.is_historical?'<span class="tag amber price-history">Referência histórica</span>':''}</div>`;
 }
-function projectCard(p,index) {return `<article class="project-card"><div class="project-card-top"><span class="project-avatar tone-${index%4}">${icon('building')}</span><div><button class="project-name" data-project-id="${p.canonicalId}">${escapeHtml(p.name)}</button><p class="project-card-company">${escapeHtml(companyName(p))}</p><span class="project-code">${escapeHtml(projectCode(p))}</span></div><button class="row-detail" data-project-id="${p.canonicalId}" aria-label="Ver detalhes de ${escapeHtml(p.name)}">${icon('chevron-right')}</button></div><p class="project-card-meta">${icon('pin')}${escapeHtml(p.neighborhood||'Bairro não informado')} · ${escapeHtml(p.normalized.city)} · ${escapeHtml(p.normalized.zone)}</p><div class="project-card-tags">${partnershipBadge(p)}${propertyBadge(p)}${badge(mcmvShort(p.normalized.mcmv),mcmvTone(p.normalized.mcmv))}${badge(STAGE_LABELS[p.normalized.stage]||'Estágio a confirmar','neutral')}</div>${projectFlag(p)}</article>`;}
+function priceDetail(p) {
+  const price=p.pricing,published=price?.status==='publicado';
+  return `<section class="price-detail ${published?'':'price-unknown'}" aria-label="Preço de referência do empreendimento"><div class="price-detail-heading"><div><h3>Preço de referência</h3><strong>${escapeHtml(priceLabel(price))}</strong></div>${published?badge(PRICE_KIND_LABELS[price.kind],'green'):''}</div>${price?.unit_details?`<p class="price-detail-unit">${escapeHtml(price.unit_details)}</p>`:''}<div class="price-detail-meta">${price?.source_url?externalLink(price.source_url,(price.source_type==='oficial'?'Fonte oficial':price.source_type==='comercial'?'Fonte comercial':'Página consultada')+(price.source_name?' · '+price.source_name:'')):''}${price?.checked_at?`<span>Consultado em ${escapeHtml(readableDate(price.checked_at))}</span>`:''}${price?.price_date?`<span>Data da oferta: ${escapeHtml(readableOfferDate(price.price_date))}</span>`:''}${price?.valid_until?`<span>Validade publicada: ${escapeHtml(readableDate(price.valid_until))}</span>`:''}${price?.is_historical?badge('Referência histórica','amber'):''}</div><p>${escapeHtml(price?.notes||'Não foi localizado preço público suficiente para esta referência. Peça a tabela vigente pelo canal de parceria.')}</p>${published?'<p class="price-detail-disclaimer">Valor anunciado para referência. Tipologia, unidade, estoque e condições devem ser confirmados na tabela vigente.</p>':''}</section>`;
+}
+function projectRow(p,index) {
+  return `<tr><td><div class="project-cell"><span class="project-avatar tone-${index%4}">${icon('building')}</span><div><button class="project-name" data-project-id="${p.canonicalId}">${escapeHtml(p.name)}</button><span class="project-code">${escapeHtml(projectCode(p))}</span>${partnershipBadge(p)}${propertyBadge(p)}${projectFlag(p)}</div></div></td><td class="company-cell">${escapeHtml(companyName(p))}</td><td class="location-cell">${escapeHtml(p.neighborhood||'Bairro não informado')}<span class="cell-secondary">${escapeHtml(p.normalized.city)} · ${escapeHtml(p.normalized.zone)}</span></td><td class="price-cell">${priceSummary(p)}</td><td>${badge(mcmvShort(p.normalized.mcmv),mcmvTone(p.normalized.mcmv),p.mcmv_evidence)}</td><td class="stage-column">${badge(STAGE_LABELS[p.normalized.stage]||p.stage,'neutral',p.stage)}<span class="cell-secondary">${p.normalized.year||'Data a confirmar'}</span></td><td><button class="row-detail" data-project-id="${p.canonicalId}" aria-label="Ver detalhes de ${escapeHtml(p.name)}">${icon('chevron-right')}</button></td></tr>`;
+}
+function projectCard(p,index) {return `<article class="project-card"><div class="project-card-top"><span class="project-avatar tone-${index%4}">${icon('building')}</span><div><button class="project-name" data-project-id="${p.canonicalId}">${escapeHtml(p.name)}</button><p class="project-card-company">${escapeHtml(companyName(p))}</p><span class="project-code">${escapeHtml(projectCode(p))}</span></div><button class="row-detail" data-project-id="${p.canonicalId}" aria-label="Ver detalhes de ${escapeHtml(p.name)}">${icon('chevron-right')}</button></div><p class="project-card-meta">${icon('pin')}${escapeHtml(p.neighborhood||'Bairro não informado')} · ${escapeHtml(p.normalized.city)} · ${escapeHtml(p.normalized.zone)}</p>${priceSummary(p)}<div class="project-card-tags">${partnershipBadge(p)}${propertyBadge(p)}${badge(mcmvShort(p.normalized.mcmv),mcmvTone(p.normalized.mcmv))}${badge(STAGE_LABELS[p.normalized.stage]||'Estágio a confirmar','neutral')}</div>${projectFlag(p)}</article>`;}
 function renderProjects() {
   const projects=filteredProjects();const total=state.model?.projects.length||0;const pageCount=Math.max(1,Math.ceil(projects.length/state.pageSize));state.page=Math.max(1,Math.min(state.page,pageCount));
   const start=(state.page-1)*state.pageSize;const page=projects.slice(start,start+state.pageSize);
   $('#result-count').textContent=formatNumber(projects.length);$('#result-noun').textContent=projects.length===1?'empreendimento':'empreendimentos';$('#result-context').textContent=filterSize()?`de ${formatNumber(total)} na base`:'';
-  $('#result-caption').textContent=filterSize()?'Exibindo o recorte dos filtros selecionados.':'Todos os critérios da pesquisa preservados.';renderActiveFilters();
+  const priced=projects.filter(p=>p.pricing?.status==='publicado').length;
+  $('#result-caption').textContent=priceRangeInvalid()?'Revise os valores mínimo e máximo.':`${formatNumber(priced)} de ${formatNumber(projects.length)} com preço localizado · valores anunciados para referência.`;renderActiveFilters();
   if(!projects.length) $('#project-results').innerHTML=`<div class="empty-state"><div class="empty-icon">${icon('search')}</div><h3>${total?'Nenhum empreendimento neste recorte':'Sua base está vazia'}</h3><p>${total?'Experimente remover um filtro ou buscar por outro bairro. Seus arquivos continuam preservados.':'Adicione um arquivo JSON ou selecione uma pasta para começar.'}</p><button class="button primary" ${total?'data-clear-filters':'data-open-sources'}>${total?'Limpar filtros':'Adicionar dados'}</button></div>`;
-  else $('#project-results').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Empreendimento</th><th>Empresa</th><th>Localização</th><th>MCMV</th><th class="stage-column">Estágio</th><th><span class="sr-only">Detalhes</span></th></tr></thead><tbody>${page.map(projectRow).join('')}</tbody></table></div><div class="project-cards">${page.map(projectCard).join('')}</div>`;
+  else $('#project-results').innerHTML=`<div class="table-wrap"><table><thead><tr><th>Empreendimento</th><th>Empresa</th><th>Localização</th><th>Preço de referência</th><th>MCMV</th><th class="stage-column">Estágio</th><th><span class="sr-only">Detalhes</span></th></tr></thead><tbody>${page.map(projectRow).join('')}</tbody></table></div><div class="project-cards">${page.map(projectCard).join('')}</div>`;
   $('#pagination').hidden=!projects.length;$('#page-info').textContent=`${start+1}–${Math.min(start+state.pageSize,projects.length)} de ${projects.length}`;$('#page-number').textContent=`${state.page} / ${pageCount}`;$('#previous-page').disabled=state.page<=1;$('#next-page').disabled=state.page>=pageCount;
   $('#sort-select').value=state.sort;$('#page-size').value=String(state.pageSize);persistView();
 }
@@ -490,8 +519,8 @@ function projectDetailBody(p) {
     return `<div class="detail-section detail-callout"><h3>Solicitação de parceria externa</h3><p>Peça a habilitação nominal deste empreendimento. O canal encontrado não representa parceria aprovada nem garante a comissão.</p></div>${routes.map(r=>routeHtml(r,p)).join('')}`;
   }
   if(state.detailTab==='sources') {
-    const conflicts=array(p.conflicts);const fieldNames={mcmv:'Minha Casa Minha Vida',mcmv_category:'Classificação MCMV',stage:'Estágio',launch_date:'Lançamento',address:'Endereço',developer:'Empresa',zone:'Zona',neighborhood:'Bairro',commission_pf:'Comissão PF',commission_pj:'Comissão PJ',name:'Nome',route_status:'Verificação do canal'};
-    return `${conflicts.length?`<section class="detail-section"><h3>Divergências entre versões</h3><p>A consulta mais recente orienta os dados principais. Os valores encontrados permanecem abaixo para conferência.</p>${conflicts.map(c=>`<div class="conflict-card"><h4>${escapeHtml(fieldNames[c.field]||c.field)}</h4><ul>${array(c.values).map(v=>`<li>${escapeHtml(txt(v.value))}<br><small>${escapeHtml(array(v.files).join(' · '))}</small></li>`).join('')}</ul></div>`).join('')}</section>`:''}
+    const conflicts=array(p.conflicts);const fieldNames={mcmv:'Minha Casa Minha Vida',mcmv_category:'Classificação MCMV',stage:'Estágio',launch_date:'Lançamento',address:'Endereço',developer:'Empresa',zone:'Zona',neighborhood:'Bairro',commission_pf:'Comissão PF',commission_pj:'Comissão PJ',name:'Nome',route_status:'Verificação do canal',pricing:'Preço de referência'};
+    return `${conflicts.length?`<section class="detail-section"><h3>Divergências entre versões</h3><p>A consulta mais recente orienta os dados principais. Os valores encontrados permanecem abaixo para conferência.</p>${conflicts.map(c=>`<div class="conflict-card"><h4>${escapeHtml(fieldNames[c.field]||c.field)}</h4><ul>${array(c.values).map(v=>`<li>${escapeHtml(c.field==='pricing'?priceLabel(v.value):txt(v.value))}${c.field==='pricing'&&v.value?.source_url?` · ${externalLink(v.value.source_url,'Fonte do preço')}`:''}<br><small>${escapeHtml(array(v.files).join(' · '))}</small></li>`).join('')}</ul></div>`).join('')}</section>`:''}
       <section class="detail-section"><h3>Origem dos registros · ${p.occurrences}</h3>${array(p.provenance).map(v=>`<div class="provenance-row"><strong>${escapeHtml(v.fileName)}</strong><br>${escapeHtml(v.originalId||'Sem ID')} · Consulta ${escapeHtml(readableDate(v.checkedAt))}</div>`).join('')}</section>
       ${p.aliases?.length>1?detailText('Nomes encontrados',p.aliases.join(' · ')):''}
       <section class="detail-section"><h3>Fontes da pesquisa</h3>${sourceLinks([...array(p.source_urls),...array(p.sources),...array(p.project_urls),p.project_url])}</section>`;
@@ -512,6 +541,7 @@ function trackingPanel(p) {
 function renderProjectDetail(p) {
   $('#detail-content').innerHTML=`<div class="dialog-top"><div><p class="eyebrow">EMPREENDIMENTO · ${escapeHtml(projectCode(p))}</p><h2 id="detail-title">${escapeHtml(p.name)}</h2><div class="detail-meta">${icon('pin')}${escapeHtml(p.neighborhood||'Bairro não informado')} · ${escapeHtml(p.normalized.city)}</div></div><button class="icon-button" data-close="detail-dialog" aria-label="Fechar detalhes">${icon('close')}</button></div>
     <div class="detail-tags">${propertyBadge(p)}${badge(MCMV_LABELS[p.normalized.mcmv]||p.mcmv,mcmvTone(p.normalized.mcmv))}${badge(STAGE_LABELS[p.normalized.stage]||p.stage,'neutral')}${p.occurrences>1?badge(p.occurrences+' registros consolidados','blue'):''}${p.conflicts.length?badge(p.conflicts.length+' divergência(s)','amber'):''}</div>
+    ${priceDetail(p)}
     ${trackingPanel(p)}
     <nav class="detail-tabs" aria-label="Detalhes do empreendimento">${[['overview','Visão geral'],['partnership','Parceria'],['sources','Fontes & versões']].map(([id,label])=>`<button class="detail-tab ${state.detailTab===id?'active':''}" data-detail-tab="${id}" ${state.detailTab===id?'aria-current="page"':''}>${label}</button>`).join('')}</nav>
     <div class="detail-body">${projectDetailBody(p)}</div><div class="detail-bottom">${externalLink(p.project_url,'Página do empreendimento','button secondary small')}<button class="button primary small" data-detail-tab="partnership">${icon('handshake')}Ver caminho de parceria</button></div>`;
@@ -550,9 +580,9 @@ function exportData(type) {
   const data=exportDataset();const date=new Date().toISOString().slice(0,10);
   if(type==='json') downloadFile(JSON.stringify(data,null,2),'application/json;charset=utf-8',`parcerias-filtradas-${date}.json`);
   else {
-    const columns=[['Empreendimento','name'],['Empresa','developer'],['Cidade','city'],['Bairro','neighborhood'],['Zona','zone'],['Tipo','property_type'],['Minha parceria','partnership_status_label'],['Acompanhamento atualizado em','partnership_updated_at'],['Status marcado em','partnership_status_updated_at'],['Solicitada marcada em','partnership_requested_at'],['Feita marcada em','partnership_completed_at'],['Linha do tempo','partnership_timeline'],['MCMV','mcmv'],['Estágio','stage'],['Lançamento','launch_date'],['Canal PF','pf_url'],['Canal PJ','pj_url'],['Contato','partner_contact'],['Próxima ação','next_action'],['Comissão PF','commission_pf'],['Comissão PJ','commission_pj'],['IA','ai_status'],['Endereço','address'],['Consulta','checked_at'],['Fontes','source_urls']];
+    const columns=[['Empreendimento','name'],['Empresa','developer'],['Cidade','city'],['Bairro','neighborhood'],['Zona','zone'],['Tipo','property_type'],['Minha parceria','partnership_status_label'],['Acompanhamento atualizado em','partnership_updated_at'],['Status marcado em','partnership_status_updated_at'],['Solicitada marcada em','partnership_requested_at'],['Feita marcada em','partnership_completed_at'],['Linha do tempo','partnership_timeline'],['MCMV','mcmv'],['Preço de referência',p=>priceLabel(p.pricing)],['Tipo de preço',p=>PRICE_KIND_LABELS[p.pricing?.kind]||''],['Preço mínimo (R$)',p=>p.pricing?.min??''],['Preço máximo (R$)',p=>p.pricing?.max??''],['Tipologia do preço',p=>p.pricing?.unit_details||''],['Fonte do preço',p=>p.pricing?.source_url||''],['Tipo de fonte do preço',p=>p.pricing?.source_type||''],['Preço consultado em',p=>p.pricing?.checked_at||''],['Data da oferta',p=>p.pricing?.price_date||''],['Referência histórica',p=>p.pricing?.is_historical?'Sim':''],['Validade publicada',p=>p.pricing?.valid_until||''],['Ressalvas do preço',p=>p.pricing?.notes||''],['Estágio','stage'],['Lançamento','launch_date'],['Canal PF','pf_url'],['Canal PJ','pj_url'],['Contato','partner_contact'],['Próxima ação','next_action'],['Comissão PF','commission_pf'],['Comissão PJ','commission_pj'],['IA','ai_status'],['Endereço','address'],['Consulta','checked_at'],['Fontes','source_urls']];
     const cell=value=>{let s=Array.isArray(value)?value.map(item=>typeof item==='object'&&item?`${item.createdAt||''}: ${item.text||txt(item)}`:txt(item)).join(' | '):txt(value);if(/^[=+@\-\t\r]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};
-    const csv=[columns.map(c=>cell(c[0])).join(';'),...data.projects.map(p=>columns.map(c=>cell(p[c[1]])).join(';'))].join('\r\n');downloadFile('\uFEFF'+csv,'text/csv;charset=utf-8',`parcerias-filtradas-${date}.csv`);
+    const csv=[columns.map(c=>cell(c[0])).join(';'),...data.projects.map(p=>columns.map(c=>cell(typeof c[1]==='function'?c[1](p):p[c[1]])).join(';'))].join('\r\n');downloadFile('\uFEFF'+csv,'text/csv;charset=utf-8',`parcerias-filtradas-${date}.csv`);
   }
   $('#export-menu').hidden=true;$('#export-button').setAttribute('aria-expanded','false');toast(`${data.projects.length} empreendimento(s) exportado(s).`);
 }
@@ -565,7 +595,33 @@ async function copyMessage(message) {
 paintIcons();$('#search-input').value=state.filters.query;
 $('#search-input').addEventListener('input',()=>{clearTimeout(state.searchTimer);state.searchTimer=setTimeout(()=>{state.filters.query=$('#search-input').value;state.page=1;renderProjects();},120);});
 $('#partner-search').addEventListener('input',renderPartners);
-$('#filter-panel').addEventListener('input',event=>{if(event.target.id==='company-filter-search')filterCompaniesInSidebar(event.target.value);});
+$('#filter-panel').addEventListener('input',event=>{
+  const el=event.target;
+  if(el.id==='company-filter-search')filterCompaniesInSidebar(el.value);
+  if(['priceMin','priceMax'].includes(el.dataset.priceFilter)) {
+    // Edição de um dígito pode desfazer temporariamente um grupo de milhares.
+    // Colagens são validadas inteiras, sem transformar sinais, letras ou ponto decimal.
+    const editingDigit=(event.inputType==='insertText'&&/^[\d,]$/.test(event.data||''))||event.inputType?.startsWith('delete');
+    const candidate=editingDigit?el.value.replace(/\./g,''):el.value;
+    if(candidate.replace(/R\$/gi,'').trim()&&parseBRLInput(candidate)===null) {
+      el.value=formatBRL(state.filters[el.dataset.priceFilter]);
+      toast('Use reais, por exemplo 300000 ou R$ 300.000,00. O valor anterior foi mantido.');
+      return;
+    }
+    const position=el.selectionStart??el.value.length;
+    const significant=(el.value.slice(0,position).match(/[\d,]/g)||[]).length;
+    el.value=maskBRLInput(candidate);
+    let caret=0,seen=0;
+    while(caret<el.value.length&&seen<significant){if(/[\d,]/.test(el.value[caret]))seen++;caret++;}
+    el.setSelectionRange(caret,caret);
+    state.filters[el.dataset.priceFilter]=parseBRLInput(el.value);
+    state.page=1;renderPriceFilterError();renderProjects();
+  }
+});
+$('#filter-panel').addEventListener('focusout',event=>{
+  const el=event.target;
+  if(['priceMin','priceMax'].includes(el.dataset.priceFilter))el.value=formatBRL(state.filters[el.dataset.priceFilter]);
+});
 $('#filter-panel').addEventListener('change',event=>{
   const el=event.target;
   if(el.dataset.filter){const key=el.dataset.filter;state.filters[key]=el.checked?[...new Set([...state.filters[key],el.value])]:state.filters[key].filter(v=>String(v)!==el.value);applyFilters();}
@@ -609,7 +665,7 @@ document.addEventListener('click',event=>{
   if(target.hasAttribute('data-clear-filters'))clearFilters();
   if(target.hasAttribute('data-open-sources'))openDialog('source-dialog');
   if(target.dataset.toggleZone){const zone=target.dataset.toggleZone;state.filters.zones=state.filters.zones.includes(zone)?state.filters.zones.filter(v=>v!==zone):[...state.filters.zones,zone];applyFilters();}
-  if(target.dataset.removeFilter){const key=target.dataset.removeFilter;if(Array.isArray(state.filters[key]))state.filters[key]=state.filters[key].filter(v=>String(v)!==target.dataset.removeValue);else state.filters[key]=typeof state.filters[key]==='boolean'?false:'';$('#search-input').value=state.filters.query;applyFilters();}
+  if(target.dataset.removeFilter){const key=target.dataset.removeFilter;if(Array.isArray(state.filters[key]))state.filters[key]=state.filters[key].filter(v=>String(v)!==target.dataset.removeValue);else state.filters[key]=typeof state.filters[key]==='boolean'?false:['priceMin','priceMax'].includes(key)?null:'';$('#search-input').value=state.filters.query;applyFilters();}
   if(target.dataset.qualityFilter){state.filters=emptyFilters();state.filters[target.dataset.qualityFilter]=true;$('#search-input').value='';switchTab('projects');applyFilters();}
   if(target.dataset.projectId)openProject(target.dataset.projectId,target.dataset.openDetailTab||'overview');
   if(target.dataset.routeId)openRoute(target.dataset.routeId);
