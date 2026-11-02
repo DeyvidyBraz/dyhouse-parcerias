@@ -1,6 +1,6 @@
 # DYHOUSE · Parcerias imobiliárias
 
-**[Abrir o site público](https://deyvidybraz.github.io/dyhouse-parcerias/)** · **[Arquivos de pesquisa](https://github.com/DeyvidyBraz/dyhouse-parcerias/tree/main/dist/dados)** · **[Modelo de novo lote](exemplos/novo-lote.exemplo.json)**
+**[Abrir o site público](https://facilsolucao.com/)** · **[Arquivos de pesquisa](https://github.com/DeyvidyBraz/dyhouse-parcerias/tree/main/dist/dados)** · **[Modelo de novo lote](exemplos/novo-lote.exemplo.json)**
 
 Página HTML para explorar pesquisas, acrescentar novos lotes JSON e acompanhar o contato de parceria de cada empreendimento. A base reúne **198 empreendimentos**, incluindo **118 na Zona Sul de São Paulo capital**. São 159 na capital e **39 em Alphaville/Barueri**. A expansão de 02/11/2026 acrescenta 59 produtos à base anterior de 139. A importação consolida registros repetidos, mantém as fontes e expõe divergências para revisão.
 
@@ -136,7 +136,11 @@ O arquivo de exemplo contém nomes fictícios e fica fora da pasta publicada de 
 
 ### Configuração do GitHub Pages
 
-Em **Settings → Pages**, a origem é **Deploy from a branch → main → / (root)**. O índice da raiz abre o painel em `/dist/`, com caminhos relativos que funcionam no endereço de projeto do GitHub.
+Em **Settings → Pages**, a origem é **Deploy from a branch → main → / (root)** e o domínio personalizado é **`facilsolucao.com`**. O índice da raiz abre o painel em `/dist/`, com caminhos relativos compatíveis com o domínio próprio.
+
+O arquivo **`CNAME` na raiz** contém `facilsolucao.com` e deve ser preservado nas próximas publicações. O DNS é administrado no GoDaddy, nos servidores `ns03.domaincontrol.com` e `ns04.domaincontrol.com`; os registros A/AAAA do domínio principal apontam para o GitHub Pages, e `www` é um CNAME para `deyvidybraz.github.io`. O domínio foi verificado na conta GitHub; mantenha o TXT `_github-pages-challenge-deyvidybraz` para conservar essa verificação. Consulte os [registros oficiais do GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) antes de alterar o apontamento.
+
+**Acompanhamento ao trocar de endereço:** o armazenamento do navegador é separado por origem. As marcações e notas do endereço antigo não aparecem automaticamente em `https://facilsolucao.com`. Use **Backup JSON** no endereço anterior e **Abrir acompanhamento** no domínio novo para transferi-las. Os arquivos públicos de pesquisa continuam sendo lidos de `dist/dados/`.
 
 O catálogo usa o Jekyll nativo do Pages, sem dependências de execução no navegador nem token de acesso. Não adicione `.nojekyll`, pois isso desativa a geração do catálogo. A publicação é acionada por commits normais em `main`; segundo a documentação do GitHub, commits enviados por Actions com `GITHUB_TOKEN` não acionam esse build por branch. O GitHub ainda executa seu workflow de Pages para publicar.
 
@@ -356,7 +360,7 @@ node scripts/build-standalone.mjs
 Para comparar o catálogo e todos os JSON realmente publicados com a cópia local:
 
 ```sh
-node scripts/verify-pages.mjs https://deyvidybraz.github.io/dyhouse-parcerias/
+node scripts/verify-pages.mjs https://facilsolucao.com/
 ```
 
 Esse verificador exige o build concluído do Pages, confere o conteúdo público e a importação dos empreendimentos, e rejeita campos conhecidos de acompanhamento dentro das pesquisas.
