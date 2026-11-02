@@ -1,4 +1,4 @@
-import { ingestDatasets, filterProjects, buildFacets, MCMV_LABELS, STAGE_LABELS, AI_LABELS, normalizeText, PARTNERSHIP_STATUS_LABELS, TRACKING_SCHEMA, normalizeTracking, validateTrackingEnvelope, mergeTracking, applyPartnershipTracking, updatePartnershipTracking, PRICE_KIND_LABELS, formatBRL, parseBRLInput, maskBRLInput, priceLabel } from './data-core.js';
+import { ingestDatasets, filterProjects, buildFacets, MCMV_LABELS, STAGE_LABELS, AI_LABELS, normalizeText, PARTNERSHIP_STATUS_LABELS, TRACKING_SCHEMA, normalizeTracking, validateTrackingEnvelope, mergeTracking, applyPartnershipTracking, updatePartnershipTracking, PRICE_KIND_LABELS, formatBRL, parseBRLInput, maskBRLInput, priceLabel } from './data-core.js?v=20261102-precos';
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
