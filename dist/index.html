@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153d38">
+  <meta name="description" content="Explore empreendimentos em São Paulo, Barueri e Alphaville, filtre por cidade e acompanhe parcerias com notas e histórico em JSON.">
+  <title>Parcerias imobiliárias · DyHouse</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23153d38'/%3E%3Cpath d='M10 27V16l10-7 10 7v11H10m8 0v-9h5v9' fill='none' stroke='%23fff' stroke-width='2.5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#results">Ir para os resultados</a>
+  <header class="app-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="DyHouse Parcerias — início">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M6 24V13l10-7 10 7v11H6Z"/><path d="M13 24v-9h6v9"/></svg></span>
+        <span><strong>DyHouse<span class="brand-dot">.</span></strong><small>PARCERIAS</small></span>
+      </a>
+      <div class="header-actions"><span class="private-label"><span class="live-dot"></span>Espaço de pesquisa</span><button class="icon-button" id="help-button" aria-label="Como usar a página"><span data-icon="help"></span></button></div>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="page-intro">
+      <div><p class="eyebrow">PORTFÓLIO DE OPORTUNIDADES</p><h1>Encontre sua próxima parceria<span>.</span></h1><p class="intro-copy">Empreendimentos, canais de credenciamento e fontes, reunidos em um só lugar.</p></div>
+      <div class="intro-actions"><button class="button secondary" id="refresh-button"><span data-icon="refresh"></span>Atualizar</button><button class="button primary" id="import-button"><span data-icon="folder"></span>Adicionar dados</button></div>
+    </section>
+    <div class="data-state"><span class="live-dot"></span><span id="source-status">Carregando a pesquisa…</span><span class="divider-dot">·</span><span id="updated-status">Aguarde</span></div>
+    <section class="stats-grid" aria-label="Resumo dos dados carregados">
+      <article class="stat-card"><span class="stat-label">Empreendimentos únicos</span><div><strong id="stat-projects">—</strong><span class="stat-icon" data-icon="building"></span></div><small id="stat-records">Consolidando arquivos</small></article>
+      <article class="stat-card"><span class="stat-label">MCMV mencionado</span><div><strong id="stat-mcmv">—</strong><span class="stat-icon" data-icon="home"></span></div><small id="stat-mcmv-note">Fonte oficial ou comercial</small></article>
+      <article class="stat-card"><span class="stat-label">Na Zona Sul</span><div><strong id="stat-south">—</strong><span class="stat-icon" data-icon="pin"></span></div><small>Recorte geográfico da pesquisa</small></article>
+      <article class="stat-card"><span class="stat-label">Canais de parceria</span><div><strong id="stat-partners">—</strong><span class="stat-icon" data-icon="link"></span></div><small>Rotas de credenciamento identificadas</small></article>
+    </section>
+    <div id="notice-area" aria-live="polite"></div>
+    <section class="tracking-toolbar" aria-label="Arquivo de acompanhamento">
+      <div><strong>Seu acompanhamento</strong><p class="tracking-save-state" data-tracking-save-state aria-live="polite">Carregando marcações e notas…</p></div>
+      <div class="tracking-toolbar-actions"><button class="button secondary small" id="tracking-open">Abrir acompanhamento</button><button class="button secondary small" id="tracking-link">Vincular arquivo JSON</button><button class="button secondary small" id="tracking-export"><span data-icon="download"></span>Backup JSON</button><button class="button secondary small" id="tracking-retry" hidden>Tentar salvar novamente</button></div>
+    </section>
+    <nav class="tabs" aria-label="Seções da pesquisa">
+      <button class="tab active" data-tab="projects" aria-current="page"><span data-icon="grid"></span>Empreendimentos <span class="tab-count" id="tab-project-count">0</span></button>
+      <button class="tab" data-tab="partners"><span data-icon="handshake"></span>Canais de parceria <span class="tab-count" id="tab-partner-count">0</span></button>
+      <button class="tab" data-tab="files"><span data-icon="files"></span>Arquivos & duplicidades <span class="tab-count" id="tab-file-count">0</span></button>
+    </nav>
+
+    <section id="projects-panel" class="workspace">
+      <div class="filter-backdrop" id="filter-backdrop" hidden></div>
+      <aside class="filter-panel" id="filter-panel" aria-label="Filtros de empreendimentos">
+        <div class="filter-title"><h2>Filtros <span id="filter-count" class="subtle-count"></span></h2><button class="text-button" id="clear-filters">Limpar</button><button class="icon-button mobile-only" id="close-filters" aria-label="Fechar filtros"><span data-icon="close"></span></button></div>
+        <div id="filter-groups"></div>
+        <div class="filter-note"><span data-icon="info"></span><p>Combine os filtros para montar sua lista. As fontes e ressalvas acompanham cada empreendimento.</p></div>
+      </aside>
+      <div class="results-panel" id="results" tabindex="-1">
+        <div class="search-toolbar">
+          <label class="search-box"><span data-icon="search"></span><span class="sr-only">Buscar empreendimento, empresa, cidade, bairro ou endereço</span><input id="search-input" type="search" placeholder="Empreendimento, empresa, cidade ou bairro…" autocomplete="off"><kbd aria-hidden="true">/</kbd></label>
+          <button class="button secondary mobile-filter-button" id="show-filters"><span data-icon="sliders"></span>Filtros</button>
+          <div class="export-wrap"><button class="button secondary" id="export-button" aria-expanded="false"><span data-icon="download"></span><span class="export-label">Exportar</span><span data-icon="chevron-down"></span></button><div class="dropdown-menu" id="export-menu" hidden><button data-export="json">JSON · reutilizar nesta página</button><button data-export="csv">CSV · abrir em planilha</button></div></div>
+        </div>
+        <div class="results-heading"><div><h2><span id="result-count">0</span> <span id="result-noun">empreendimentos</span> <span id="result-context"></span></h2><p id="result-caption">Todos os critérios da pesquisa preservados.</p></div><label class="sort-control">Ordenar <select id="sort-select"><option value="original">Ordem da pesquisa</option><option value="name">Nome A–Z</option><option value="company">Empresa A–Z</option><option value="city">Cidade</option><option value="zone">Região</option><option value="recent">Consulta mais recente</option><option value="conflicts">Divergências primeiro</option></select></label></div>
+        <div id="active-filters" class="active-filters" aria-label="Filtros aplicados"></div>
+        <div id="project-results"></div>
+        <div class="pagination" id="pagination"><span id="page-info"></span><div><label>Por página <select id="page-size"><option>25</option><option>50</option><option>100</option></select></label><button class="icon-button" id="previous-page" aria-label="Página anterior"><span data-icon="chevron-left"></span></button><span id="page-number"></span><button class="icon-button" id="next-page" aria-label="Próxima página"><span data-icon="chevron-right"></span></button></div></div>
+      </div>
+    </section>
+
+    <section id="partners-panel" hidden><div class="section-heading"><div><h2>Canais para iniciar a parceria</h2><p>Escolha uma empresa para ver o credenciamento PF/PJ, os contatos e as condições identificadas.</p></div><label class="search-box compact"><span data-icon="search"></span><span class="sr-only">Buscar canal de parceria</span><input id="partner-search" type="search" placeholder="Buscar empresa ou canal…"></label></div><div class="partner-grid" id="partner-results"></div></section>
+
+    <section id="files-panel" hidden>
+      <div class="section-heading"><div><h2>Uma base, várias pesquisas</h2><p>Os arquivos são consolidados sem usar os códigos E001 ou P01 como identidade global.</p></div><button class="button secondary" id="files-add-button"><span data-icon="plus"></span>Adicionar pesquisa</button></div>
+      <div class="quality-summary" id="quality-summary"></div>
+      <div class="files-layout"><article class="surface"><div class="surface-heading"><h3>Arquivos carregados</h3><span class="tag neutral">.json</span></div><div id="file-results"></div></article><article class="surface"><div class="surface-heading"><h3>Como a consolidação funciona</h3><span data-icon="layers"></span></div><ol class="process-list"><li><strong>Reconhece a mesma oportunidade</strong><span>Compara nome, empresa, cidade e endereço, ou a página específica do empreendimento.</span></li><li><strong>Preserva o histórico</strong><span>Une fontes, versões e caminhos de parceria. A consulta mais recente orienta os dados exibidos.</span></li><li><strong>Sinaliza o que diverge</strong><span>Valores conflitantes ficam disponíveis nos detalhes. Nomes semelhantes aparecem para conferência.</span></li><li><strong>Mantém fases distintas</strong><span>Fases, torres e condomínios identificados de forma diferente permanecem separados.</span></li></ol></article></div>
+      <div id="data-warnings"></div>
+      <div id="duplicates-results"></div>
+      <div id="possible-duplicates-results"></div>
+    </section>
+    <footer class="app-footer"><span>DyHouse · Pesquisa de parcerias</span><span>Dados pesquisados, com fontes e condições de confirmação.</span><button class="text-button" id="footer-help">Como usar</button></footer>
+  </main>
+
+  <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-title"><div id="detail-content"></div></dialog>
+  <dialog class="source-dialog" id="source-dialog" aria-labelledby="source-title">
+    <div class="dialog-top"><div><p class="eyebrow">SUAS FONTES</p><h2 id="source-title">Adicionar ou atualizar pesquisas</h2></div><button class="icon-button" data-close="source-dialog" aria-label="Fechar"><span data-icon="close"></span></button></div>
+    <p class="dialog-intro">Use arquivos <strong>.json</strong> no mesmo formato da pesquisa. Você pode adicionar vários lotes; os empreendimentos repetidos serão consolidados.</p>
+    <div class="source-options"><button class="source-choice" id="choose-folder"><span class="source-choice-icon" data-icon="folder"></span><span><strong>Selecionar uma pasta</strong><small>Ler os arquivos JSON da pasta e das subpastas.</small></span><span data-icon="chevron-right"></span></button><button class="source-choice" id="choose-files"><span class="source-choice-icon" data-icon="files"></span><span><strong>Adicionar arquivos JSON</strong><small>Escolher um ou mais arquivos do seu dispositivo.</small></span><span data-icon="chevron-right"></span></button></div>
+    <div class="source-mode"><label><input type="radio" name="import-mode" value="add" checked> Somar à base carregada</label><label><input type="radio" name="import-mode" value="replace"> Usar somente a seleção</label></div>
+    <p class="small-copy">Ao somar outra pasta, os arquivos anteriores permanecem na consulta. Somente a pasta selecionada por último fica conectada para releitura.</p><div class="folder-status" id="folder-status"></div>
+    <label class="toggle-row"><input type="checkbox" id="auto-refresh"> Atualizar a cada 30 segundos enquanto a página estiver aberta</label><p class="small-copy" id="auto-refresh-note">Disponível para a pasta do servidor local ou uma pasta conectada em navegador compatível.</p>
+    <details class="help-details"><summary>Como adicionar arquivos à pasta dados/</summary><p>No pacote local, coloque novos arquivos <strong>.json</strong> em <code>dist/dados/</code>, execute <code>node server.mjs</code> e clique em <strong>Atualizar</strong>. A pasta é relida a cada atualização, sem editar a página.</p><p>Na versão online ou no HTML aberto diretamente, use <strong>Selecionar uma pasta</strong> ou <strong>Adicionar arquivos</strong>. A leitura fica no seu navegador. Alguns navegadores exigem selecionar a pasta novamente para enxergar arquivos novos.</p><p>Formato recomendado: <code>{ "projects": [...], "partners": [...] }</code>. CSV e XLSX não são formatos de entrada desta versão.</p></details>
+    <div class="dialog-bottom"><button class="text-button" id="restore-base">Restaurar a pesquisa inicial</button><button class="button primary" data-close="source-dialog">Concluir</button></div>
+  </dialog>
+
+  <dialog class="help-dialog" id="help-dialog" aria-labelledby="help-title"><div class="dialog-top"><div><p class="eyebrow">GUIA RÁPIDO</p><h2 id="help-title">Da pesquisa ao contato</h2></div><button class="icon-button" data-close="help-dialog" aria-label="Fechar"><span data-icon="close"></span></button></div><div class="help-body"><h3>1. Filtre a base</h3><p>Combine empresas, cidades, regiões, bairros, MCMV, estágio, ano de lançamento, situação da parceria, qualidade do canal e condições de uso por IA. Você pode selecionar mais de uma cidade. Alphaville é uma região: o município aparece como Barueri ou Santana de Parnaíba quando confirmado na pesquisa.</p><h3>2. Abra um empreendimento</h3><p>Nos detalhes você encontra os links PF/PJ, contatos, passos, comissão publicada, mensagem sugerida e fontes. Abrir um canal não significa que a parceria já foi aprovada.</p><h3>3. Registre o progresso</h3><p>Nos detalhes, marque <strong>Não solicitada</strong>, <strong>Parceria solicitada</strong> ou <strong>Parceria feita</strong> e acrescente notas do contato. A linha do tempo guarda cada nota e mudança de situação com data e hora. Essas marcações são suas; a página não envia mensagens nem confirma aprovações pela empresa.</p><h3>4. Salve o acompanhamento</h3><p>No pacote com servidor local, as alterações são gravadas automaticamente em um JSON separado das pesquisas. Na versão online ou no HTML, <strong>Vincular arquivo JSON</strong> permite gravar no arquivo escolhido quando o navegador oferece esse recurso; após reabrir a página, use <strong>Abrir acompanhamento</strong> para vinculá-lo novamente. Use o arquivo vinculado em uma janela por vez; o servidor local também protege contra gravações simultâneas de sessões diferentes. <strong>Backup JSON</strong> exporta todas as notas e marcações em qualquer navegador. O estado de gravação aparece acima da lista; uma falha mantém os dados no navegador e fica sinalizada.</p><h3>5. Acrescente novos lotes</h3><p>Use JSON na pasta <code>dist/dados/</code> com o servidor local, ou selecione uma pasta/arquivos no navegador. Duplicatas exatas são consolidadas; divergências e possíveis repetições ficam visíveis.</p><h3>6. Exporte seu recorte</h3><p>O JSON do recorte mantém os dados, o histórico da pesquisa e o acompanhamento dos empreendimentos selecionados; pode ser reimportado. O CSV inclui cidade, situação, datas das marcações e linha do tempo. Use Backup JSON para salvar o acompanhamento completo, independente dos filtros. Nenhum filtro remove registros dos arquivos originais.</p><div class="help-callout"><strong>Entenda o MCMV</strong><p>“Sim — oficial” e “Sim — comercial” têm evidências diferentes. “Não — inferência por preço” vale para as tipologias pesquisadas. “A confirmar” significa ausência de evidência suficiente. Sempre consulte as fontes e as condições de cada unidade.</p></div><div class="help-callout"><strong>Datas e regiões</strong><p>Registro de incorporação não é data de lançamento. A base inclui lançamentos recentes, pré-lançamentos e obras identificadas; datas anteriores e recência não publicada têm ressalvas no empreendimento. As zonas seguem o recorte da pesquisa; o endereço ajuda a resolver diferenças entre anúncios.</p></div><p class="small-copy">As importações são processadas no navegador. A página não envia solicitações de parceria nem altera as pesquisas originais. Marcações e notas ficam em um arquivo de acompanhamento quando conectado e também em cache neste navegador. Os arquivos de pesquisa importados precisam ser reabertos após recarregar a página.</p></div><div class="dialog-bottom"><span></span><button class="button primary" data-close="help-dialog">Entendi</button></div></dialog>
+
+  <input type="file" id="files-input" accept=".json,application/json" multiple hidden>
+  <input type="file" id="tracking-input" accept=".json,application/json" hidden>
+  <input type="file" id="folder-input" webkitdirectory multiple hidden>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
